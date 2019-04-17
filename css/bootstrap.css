@@ -10036,3 +10036,7 @@ a.text-dark:hover, a.text-dark:focus {
   }
 }
 /*# sourceMappingURL=bootstrap.css.map */
+.card-segmento {
+	padding-top: 20px;
+	padding-bottom: 60px;
+}

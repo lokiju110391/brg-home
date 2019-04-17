@@ -1,4 +1,8 @@
 
+body {
+	font-family: "Baskerville Old Face"; 
+}
+
 a, a:hover, a:active, a:visited, a:focus {
     text-decoration:none;
     color: #ffffff;
@@ -64,7 +68,7 @@ a, a:hover, a:active, a:visited, a:focus {
 .menu-topo-brg {
 	height: 85px;
 	width: 100%;
-	background-color: #442a1b;
+	background-color: #1f140e;
 }
 
 .menu-text-branco {
@@ -75,15 +79,15 @@ a, a:hover, a:active, a:visited, a:focus {
 
 
 .menu-text-ativo {
-	color: #ce7900;
+	color: #8d5934;
 	font-weight: 500;
 	font-size: 16px;
 }
 
 .alinhamento-central {
-	display: flex;
 	align-items: center;
 	flex-wrap: wrap;	
+	width: 100%;
 }
 
 .bunner-principal {
@@ -93,10 +97,13 @@ a, a:hover, a:active, a:visited, a:focus {
 	height: 600px;
 	text-align: center;
 	padding: 30px;
-}
+	background-image: url(../img/topo_bg.png);
+	background-size:     cover;
+    background-repeat:   no-repeat;
+    background-position: center center; }
 
 .titulo-branco {
-	padding-top: 120px;
+	padding-top: 10px;
 	color: #FFFFFF;
 }
 
@@ -112,4 +119,274 @@ a, a:hover, a:active, a:visited, a:focus {
 	color: #FFFFFF;
 	font-size: 16px;
 	width: 400px;
+}
+
+.title-session-color {
+	padding-top: 30px;
+	padding-bottom: 40px;
+	color: #442a1b;
+	font-weight: bold;
+}
+
+.paragrafo-informative {
+	text-align: justify;
+	font-size: 16px;
+	font-weight: 500;
+	color: #aa8367;
+	padding-bottom: 40px;
+}
+
+.paragrafo-quote {
+	text-align: justify;
+	font-size: 40px;
+	font-weight: 600;
+	color: #aa8367;
+	padding-bottom: 25px;
+}
+
+.paragrafo-quote-autor {
+	font-size: 16px;
+	position: relative;
+	top: -15px
+}
+
+.separator {	
+	background: #4c3629;
+	background-image: url(../img/../img/livro.png);
+	background-size:     cover;
+    background-repeat:   no-repeat;
+    background-position: center center; 
+	height: 350px;
+}
+
+.campo-proficionais {
+	background-color: #301708;
+}
+
+.title-session-white {
+	padding-top: 40px;
+	padding-bottom: 40px;
+	color: #ffffff;
+	font-weight: bold;
+}
+
+.paragrafo-informative-white {
+	text-align: justify;
+	font-size: 16px;
+	font-weight: 500;
+	color: #ffffff;
+	padding-bottom: 40px;
+}
+
+.separador-tipo-2 {
+	border: 1px solid #ce7900;
+	width: 200px;
+	margin: auto;
+	margin-top: 15px;
+	margin-bottom: 15px;
+	position: relative;
+	top: -35px;
+}
+
+.avatar-card {
+	padding: 10px !important;	
+}
+
+.avatar-area {
+	padding-bottom: 40px;
+}
+
+.avatar-card-photo {
+	width: 100%
+}
+
+.avatar-card-name {
+	color: #FFFFFF;
+	font-weight: 600;
+	font-size: 25px;
+	margin-bottom: 10px;	
+}
+
+.avatar-card-text {
+	padding-bottom: 15px;
+	padding-top: 15px;
+	border: 1px solid #6f4425;
+}
+
+.avatar-card-info {
+	color: #FFFFFF;
+	font-weight: 400;
+	font-size: 16px;
+	margin-bottom: 10px;
+}
+
+.campo-atuacao {
+	background-color: #d9d3ca;
+}
+
+.title-session-brow {
+	padding-top: 40px;
+	padding-bottom: 40px;
+	color: #442a1b;
+	font-weight: bold;
+}
+
+.separador-tipo-3 {
+	border: 1px solid #442a1b;
+	width: 200px;
+	margin: auto;
+	margin-top: 15px;
+	margin-bottom: 15px;
+	position: relative;
+	top: -35px;
+}
+
+.paragrafo-informative-brow {
+	text-align: justify;
+	font-size: 16px;
+	font-weight: 500;
+	color: #442a1b;
+	padding-bottom: 40px;
+}
+
+.paragrafo-segmento-brow {
+	text-align: justify;
+	font-size: 16px;
+	font-weight: 500;
+	color: #442a1b;
+}
+
+.simple-bold {
+	font-weight: 600;	
+}
+
+.campo-noticias {
+	background-color: #FFFFFF;
+}
+
+.card-noticia-1 {
+	background-color: #d9d3ca;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	font-size: 20px;
+	margin-top: 20px;
+	margin-bottom: 20px;
+}
+
+.car-noticia-2 {
+	background-color: #c2b19c;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	font-size: 20px;
+	margin-top: 20px;
+	margin-bottom: 20px;
+}
+
+.btn-more {
+	color: #442a1b;
+	background: #ffffff;
+	border-color: #8d5934;
+	border-radius: 2px;
+	padding-left: 20px;
+	padding-right: 20px;
+}
+
+.btn-more:hover {
+	color: #ffffff;
+	background: #442a1b;
+	border-color: #8d5934;
+	border-radius: 2px;
+	padding-left: 20px;
+	padding-right: 20px;
+}
+
+
+.infor-area {
+}
+
+.campo-contato {
+	background-image: url("../img/museum-art-curitiba-oscar-niemeyer.png");
+	background-size:     cover;                      /* <------ */
+    background-repeat:   no-repeat;
+    background-position: center center;
+	padding-top: 150px;
+	padding-bottom: 150px;
+}
+
+.conteudo-white {
+	color: #ffffff;
+	font-size: 25px;
+	font-weight: 600;
+	margin-top: 20px;
+	margin-bottom: 20px;
+}
+
+.endereco-white {
+	color: #ffffff;
+	font-size: 18px;
+	margin-top: 20px;
+	margin-bottom: 20px;		
+}
+
+.brg-form {
+	border-color: #FFFFFF;
+	background: rgba(1,1,1,0);
+	color: #ffffff;	
+	border: 1px solid #FFFFFF;
+	padding: 5px;
+}
+
+.brg-form:focus {
+	border-radius: 0px;
+	border-color: #FFFFFF;
+	background: rgba(1,1,1,0);
+	color: #ffffff;
+	padding: 5px 5px 5px 5px;
+}
+
+.btn-enviar {
+	color: #ffffff;
+	background: #8d5934;
+	border-color: #8d5934;
+	border-radius: 2px;
+	padding-left: 20px;
+	padding-right: 20px;
+}
+
+.btn-enviar:hover {
+	color: #ffffff;
+	background: #8d5935;
+	border-color: #8d5935;
+	border-radius: 2px;
+	padding-left: 20px;
+	padding-right: 20px;
+}
+
+.icon-brg {
+	color: #ffffff;
+	padding-right: 10px;
+}
+
+.campo-footer {
+	background-color: #442a1b;
+	padding-top: 40px;
+	padding-bottom: 40px;
+}
+
+
+
+
+.simple-white {
+	color: #FFFFFF;
+}
+
+.space-board {
+	padding-top: 40px;
+}
+
+.newsletter {
+	color: #FFFFFF;
+	font-weight: 600;
+	font-size: 20px;
+	margin-bottom: 20px;
 }
