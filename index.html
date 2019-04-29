@@ -45,39 +45,124 @@
 		
 		<!-- Topo -->
 
-		<div class="navbar d-flex flex-column flex-md-row align-items-center p-3 px-md-4 mb-3 menu-topo-brg">
 
-			<div class="container d-flex justify-content-between" style="width: 100%">
-				<div class="row alinhamento-central">
-					<div class="col-md-9">
+		<div class="menu-topo-brg-mobile d-md-none">
+            
+            <div class="row" style="width: 100%;padding-left: 10px; margin-bottom: 10px">                
+                
+                <div class="navbar-brg-col col-6"> 
+                    <a href="/"> 
+                        <img class="logo-header-mobile" src="img/Logo_big_color.svg" alt="Logo BRG"> 
+                    </a> 
+                </div>
 
-				    	<a class="p-2 menu-text-ativo" href="#">HOME</a>
-				    	<a class="p-2 menu-text-branco" href="#">SOBRE NOS</a>
-				    	<a class="p-2 menu-text-branco" href="#">PROFISSIONAIS</a>
-				    	<a class="p-2 menu-text-branco" href="#">ATUACAO</a>
-				    	<a class="p-2 menu-text-branco" href="#">NOTICIAS</a>
-				    	<a class="p-2 menu-text-branco" href="#">CONTATO</a>
+                <div class="navbar-brg-col col-6" style="padding-right: 0px;">
+                    <div class="btn-collaps" onclick="abre_fecha_menu();">
+                        <i id="icon-menu-mobile" class="fas icon-menu-mobile fa-angle-down"></i>                    
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+		<div id="menu-mobile" class="navbar-platta-mobile-menu d-md-none" style="display: none;">
+
+            <div class="paginas-mobile" style="padding-top: 10px;">               
+
+                <div class="text-center" style="padding-top: 10px;">                        
+                    <a class="header-font" href="#">
+                        HOME
+                    </a>
+                </div>
+
+                <div class="text-center" style="padding-top: 10px;">                        
+                    <a class="header-font" href="#">
+                        SOBRE NOS
+                    </a>
+                </div>
+
+                <div class="text-center" style="padding-top: 10px;">                        
+                    <a class="header-font" href="#">
+                        PROFISSIONAIS
+                    </a>
+                </div>
+
+                <div class="text-center" style="padding-top: 10px;">                        
+                    <a class="header-font" href="#">
+                        ATUACAO
+                    </a>
+                </div>
+
+                <div class="text-center" style="padding-top: 10px;">                        
+                    <a class="header-font" href="#">
+                        NOTICIAS
+                    </a>
+                </div>
+
+                <div class="text-center" style="padding-top: 10px;">                        
+                    <a class="header-font" href="#">
+                        CONTATO
+                    </a>
+                </div>                
+
+            </div>
+
+            <div class="login-divider-mobile">
+            </div>
+
+            <div class="login-mobile">
+
+                <div class="row text-center" style="padding-top: 10px;">
+                    <div class="navbar-platta-menu-user col-12"> 
+                        <a href="{{ url('login') }}">
+                            <button type="button" class="btn btn-primary login-btn">Entrar</button>
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <div class="d-none d-md-block">
+			<div class="navbar d-flex flex-column flex-md-row align-items-center menu-topo-brg">
+
+				<div class="container d-flex justify-content-between" style="width: 100%; margin-bottom: 15px;">
+					<div class="row alinhamento-central">
+						<div class="col-md-9">
+
+					    	<a class="p-2 menu-text-ativo" href="#">HOME</a>
+					    	<a class="p-2 menu-text-branco" href="#">SOBRE NOS</a>
+					    	<a class="p-2 menu-text-branco" href="#">PROFISSIONAIS</a>
+					    	<a class="p-2 menu-text-branco" href="#">ATUACAO</a>
+					    	<a class="p-2 menu-text-branco" href="#">NOTICIAS</a>
+					    	<a class="p-2 menu-text-branco" href="#">CONTATO</a>
+
+						</div>
+
+						<div class="menu-right col-md-3" style="text-align: right">
+							<img alt="Logo BRG" src="img/Logo_big_color.svg" width="250px;">
+						</div>
 
 					</div>
-
-					<div class="menu-right col-md-3" style="text-align: right">
-						<img alt="Logo BRG" src="img/Logo_big_color.svg" width="250px;">
-					</div>
-
-				</div>
-			</div>		  	
+				</div>		  	
+			</div>
 		</div>
 
 		<!-- Fim Topo -->
 
 		<!-- Bunner 1 -->
 
-			<div class="bunner-principal">				
-				<img alt="Logo BRG" src="img/Logo_big.svg" width="600px;" style="padding-top: 40px;"><a href="#">SOBRE NOS</a>
-				<h2 class="titulo-branco">Soluções jurídicas eficientes.</h2>
-				<div class="separador-tipo-1"></div>
-				<div style="width: 600px; margin: auto;">
-					<span class="info-branco"> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc eget maximus erat. Vestibulum vitae nisl a purus pellentesque faucibus id sed leo. </span>
+			<div class="bunner-principal">
+				<div style="margin-top: auto; margin-bottom: auto;">		
+					<img class="brg-mobile" alt="Logo BRG" src="img/Logo_big.svg" width="600px;" style="padding-top: 40px;">
+					<h2 class="titulo-branco">Soluções jurídicas eficientes.</h2>
+					<div class="separador-tipo-1"></div>
+					<div class="brg-mobile" style="width: 600px; margin: auto;">
+						<span class="info-branco"> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc eget maximus erat. Vestibulum vitae nisl a purus pellentesque faucibus id sed leo. </span>
+					</div>
 				</div>
 			</div>
 
