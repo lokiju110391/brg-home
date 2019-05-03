@@ -17,7 +17,27 @@
 		
 		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
 		<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBd5bdg9Xro8pVpPGZbFFrFddGylCkXhRU"></script>
-		
+				
+<link href="https://fonts.googleapis.com/css?family=EB+Garamond|Libre+Baskerville" rel="stylesheet">
+
+		<script type="text/javascript">
+			
+			function manifesto_click() {
+
+				$('html, body').animate({
+			        scrollTop: $('#t1').offset().top
+			    },10000)
+
+
+
+			}
+
+			function abrir_social(link) {
+				window.open(link, '_blank'); 
+			}
+			
+		</script>
+
 		<script>
 			// Initialize and add the map
 			function initMap() {
@@ -170,7 +190,7 @@
 
                 <div class="text-center" style="padding-top: 10px;">                        
                     <a class="header-font" href="#">
-                        SOBRE NOS
+                        SOBRE NÓS
                     </a>
                 </div>
 
@@ -182,13 +202,13 @@
 
                 <div class="text-center" style="padding-top: 10px;">                        
                     <a class="header-font" href="#">
-                        ATUACAO
+                        ATUAÇÃO
                     </a>
                 </div>
 
                 <div class="text-center" style="padding-top: 10px;">                        
                     <a class="header-font" href="#">
-                        NOTICIAS
+                        NOTÍCIAS
                     </a>
                 </div>
 
@@ -226,10 +246,10 @@
 						<div class="col-md-9">
 
 					    	<a class="p-2 menu-text-ativo" href="#">HOME</a>
-					    	<a class="p-2 menu-text-branco" href="#">SOBRE NOS</a>
+					    	<a class="p-2 menu-text-branco" href="#">SOBRE NÓS</a>
 					    	<a class="p-2 menu-text-branco" href="#">PROFISSIONAIS</a>
-					    	<a class="p-2 menu-text-branco" href="#">ATUACAO</a>
-					    	<a class="p-2 menu-text-branco" href="#">NOTICIAS</a>
+					    	<a class="p-2 menu-text-branco" href="#">ATUAÇÃO</a>
+					    	<a class="p-2 menu-text-branco" href="#">NOTÍCIAS</a>
 					    	<a class="p-2 menu-text-branco" href="#">CONTATO</a>
 
 						</div>
@@ -253,7 +273,10 @@
 					<h2 class="titulo-branco">Soluções jurídicas eficientes.</h2>
 					<div class="separador-tipo-1"></div>
 					<div class="brg-mobile" style="width: 600px; margin: auto;">
-						<span class="info-branco"> O BRG Advogados entende que cada problema demanda uma solução específica. Venha conhecer propostas inovadoras. </span>
+						<span class="info-branco">
+							O BRG Advogados entende que cada problema demanda uma solução específica. <br> 
+							Venha conhecer propostas inovadoras. 
+						</span>
 					</div>
 				</div>
 			</div>
@@ -267,6 +290,16 @@
 			<div class="text-center title-session-color">
 				<h1>APRESENTAÇÃO</h1>
 			</div>
+			<div class="separador-tipo-3"></div>
+			<div class="paragrafo-informative">				
+				<span>
+						O BORA RECKA GOMES ADVOGADOS (BRG ADVOGADOS) nasceu da união de profissionais com experiência nos ramos público e privado. O escritório é sediado no centro da capital paranaense e atua de forma consultiva e contenciosa nas áreas do direito civil, incluindo empresarial, família e sucessões, administrativo e eleitoral. 
+				</span>
+			</div>
+
+			<div class="paragrafo-quote">	
+				"Quando falamos de história, temos o costume de nos refugiar no passado. É nele que se pensa encontrar o seu começo e o seu fim. Na realidade, é o inverso: a história começa hoje e continua amanhã" <span class="paragrafo-quote-autor">- D.N. Marinotis</span>
+			</div>
 
 			<div class="paragrafo-informative">				
 				<span>
@@ -274,16 +307,6 @@
 						Acreditamos na valorização do contato direto e pessoal entre cliente e advogado, tornando o trabalho dinâmico e entregando satisfação
 						pelos serviços prestados. Nossa atuação especializada, inovadora e responsável proporciona excelência em soluções jurídicas.
 				</span>
-			</div>
-			
-			<div class="paragrafo-informative">				
-				<span>
-						O BORA RECKA GOMES ADVOGADOS (BRG ADVOGADOS) nasceu da união de profissionais com experiência nos ramos público e privado. O escritório é sediado no centro da capital paranaense e atua de forma consultiva e contenciosa nas áreas do direito civil, incluindo empresarial, família e sucessões, administrativo e eleitoral. 
-				</span>
-			</div>
-			
-			<div class="paragrafo-quote">	
-				"Quando falamos de história, temos o costume de nos refugiar no passado. É nele que se pensa encontrar o seu começo e o seu fim. Na realidade, é o inverso: a história começa hoje e continua amanhã" <span class="paragrafo-quote-autor">- D.N. Marinotis</span>
 			</div>
 			
 			<div class="paragrafo-informative">				
@@ -328,7 +351,7 @@
 					<div class="col-md-4 avatar-card">						
 						<img class="avatar-card-photo" src="img/IMG_7963-2.jpg">
 						<div class="text-center avatar-card-text" id="t1-a">
-							<div class="avatar-card-name"> GABRIEL RICARDO BORA </div>
+							<div class="avatar-card-name" onclick="abrir_social('http://linkedin.com/in/gabriel-bora-836560184');"> GABRIEL RICARDO BORA </div>
 							<div class="avatar-card-info"> • Advogado inscrito na Ordem dos Advogados do Brasil – Seção do Paraná - sob o nº. 65.969. </div> 
 							<div class="avatar-card-info"> • Especialista em Direito Processual Civil (2014) pelo Instituto Romeu Felipe Bacellar. </div> 
 							<div class="avatar-card-info"> • Graduado em Direito (2013) pela Faculdade de Direito de Curitiba - FDC. </div>
@@ -338,7 +361,7 @@
 					<div class="col-md-4 avatar-card">						
 						<img class="avatar-card-photo" src="img/IMG_7980-2.jpg">
 						<div class="text-center avatar-card-text" id="t2-a">
-							<div class="avatar-card-name"> GUILHERME RECKA DE ALMEIDA  </div>
+							<div class="avatar-card-name"  onclick="abrir_social('http://linkedin.com/in/recka');"> GUILHERME RECKA DE ALMEIDA  </div>
 							<div class="avatar-card-info"> • Advogado inscrito na Ordem dos Advogados do Brasil – Seção do Paraná - sob o nº. 65.970. </div> 
 							<div class="avatar-card-info"> • Especialista em Direito Constitucional (2014) pela Fundação Escola do Ministério Público do Estado do Paraná - FEMPAR. </div> 
 							<div class="avatar-card-info"> • Graduado em Direito (2013) pela Faculdade de Direito de Curitiba - FDC.</div>
@@ -348,7 +371,7 @@
 					<div class="col-md-4 avatar-card">						
 						<img class="avatar-card-photo" src="img/IMG_7968-2.jpg">
 						<div class="text-center avatar-card-text" id="t3-a">
-							<div class="avatar-card-name"> MARCUS VINÍCIUS SIQUEIRA GOMES </div>
+							<div class="avatar-card-name" onclick="abrir_social('http://linkedin.com/in/marcus-vinícius-siqueira-gomes-8a0643bb')"> MARCUS VINÍCIUS SIQUEIRA GOMES </div>
 							<div class="avatar-card-info"> • Advogado inscrito na Ordem dos Advogados do Brasil – Seção do Paraná - sob o nº. 86.009. </div> 
 							<div class="avatar-card-info"> • Especialista em Direito Administrativo (2018) pelo Instituto Romeu Felipe Bacellar. </div> 
 							<div class="avatar-card-info"> • Graduado em Direito (2017) pela Faculdade de Direito de Curitiba - FDC. </div>
@@ -368,7 +391,7 @@
 			<div class="container">
 				
 				<div class="text-center title-session-brow">				
-					<h1>SEGMENTOS DE ATUACAO</h1>
+					<h1>SEGMENTOS DE ATUAÇÃO</h1>
 				</div>
 				
 				<div class="separador-tipo-3"></div>
@@ -382,12 +405,12 @@
 						<div class="row">
 							
 							<div class="col-md-12 text-center" style="margin-top: auto; margin-bottom: auto; padding-bottom: 50px;">
-								<img src="img/martelo_icon.svg" width="150px;">
+								<img src="img/martelo_icon.svg" width="115px;">
 							</div>
 							
 							<div class="col-md-12 paragrafo-segmento-brow">
-								<h4 class="simple-bold">Direito Civil</h4>
-								<span>
+								<h4 class="simple-bold text-center">Direito Civil</h4>
+								<span>				
 									<li> Direito bancário, operações financeiras e títulos de crédito; <br> </li>
 									<li> Direito do consumidor; <br> </li>
 									<li> Direito contratual e negócios jurídicos; <br> </li>
@@ -409,11 +432,11 @@
 						<div class="row">
 							
 							<div class="col-md-12 text-center" style="margin-top: auto; margin-bottom: auto; padding-bottom: 50px;">
-								<img src="img/balanca_icon.svg" width="150px;">
+								<img src="img/balanca_icon.svg" width="115px;">
 							</div>
 							
 							<div class="col-md-12 paragrafo-segmento-brow">
-								<h4 class="simple-bold">Direito Administrativo</h4>
+								<h4 class="simple-bold text-center">Direito Administrativo</h4>
 								<span>
 									<li> Processos licitatórios e contratos administrativos; <br> </li>
 									<li> Atuação perante os Tribunais de Contas; <br> </li>
@@ -421,12 +444,11 @@
 									<li> Processo administrativo disciplinar (PAD); <br> </li>
 									<li> Proteção de interesse de particulares em desapropriação, tombamento, servidão etc.; <br> </li>
 									<li> Improbidade administrativa; <br> </li>
-									<li> Atuação em defesa dos interesses de candidatos a concursos públicos; <br> </li>
+									<li> Defesa dos interesses de candidatos a concursos públicos; <br> </li>
 									<li> Responsabilidade civil do Estado; <br> </li>
 									<li> Direito ambiental. <br> </li>
 								</span>
-							</div>
-							
+							</div>							
 						</div>
 					</div>
 					
@@ -434,18 +456,18 @@
 						<div class="row">
 							
 							<div class="col-md-12 text-center" style="margin-top: auto; margin-bottom: auto; padding-bottom: 50px;">
-								<img src="img/pen_icon.svg" width="150px;">
+								<img src="img/pen_icon.svg" width="115px;">
 							</div>
 							
 							<div class="col-md-12 paragrafo-segmento-brow">
-								<h4 class="simple-bold">Direito Eleitoral</h4>
+								<h4 class="simple-bold text-center">Direito Eleitoral</h4>
 								<span>
-									<li> Atuação preventiva, consultiva geral, análise prévia de materiais de propaganda, elaboração de pareceres jurídicos etc.; <br> </li>
+									<li> Atuação preventiva e consultiva geral; <br> </li>
 									<li> Análise de condições de elegibilidade; <br> </li>
-									<li> Orientação de pré-campanha, convenções e escolha de candidatos; <br> </li>
-									<li> Atuação em registros e impugnações de registros de candidaturas; <br> </li>
-									<li> Representações eleitorais, tais como propaganda e condutas vedadas; <br> </li>
-									<li> Ações de investigação judicial eleitoral, envolvendo abuso de poder, caixa dois, impugnações de mandato eletivo etc. <br> </li>
+									<li> Pré-campanha e convenções; <br> </li>
+									<li> Registro e impugnação de candidatura; <br> </li>
+									<li> Representações eleitorais (propaganda, condutas vedadas etc.); <br> </li>
+									<li> Investigação judicial eleitoral (abuso de poder, caixa dois etc.) e impugnações de mandato eletivo; <br> </li>
 									<li> Prestação de contas eleitorais; <br> </li>
 									<li> Auxílio em procedimentos internos partidários. <br> </li>
 								</span>
@@ -463,7 +485,7 @@
 			<div class="container">
 				
 				<div class="text-center title-session-brow">				
-					<h1>NOTICIAS</h1>
+					<h1>NOTICÍAS</h1>
 				</div>
 				
 				<div class="separador-tipo-2"></div>
@@ -505,7 +527,7 @@
 			<div class="container" style="height: 100%">
 				<div class="row infor-area">
 					<div class="col-md-6">
-						<span class="conteudo-white"> COTATO </span> <br> <br>
+						<span class="conteudo-white"> CONTATO </span> <br> <br>
 						<span class="endereco-white"> <i class="fas fa-map-marker-alt icon-brg"></i> R. Mal. Deodoro, 450 - Sala 1105, Centro <br> Curitiba - PR | CEP: 800.10-010 </span> <br> <br>
 						<span class="endereco-white"> <i class="fas fa-phone icon-brg"></i> Tel. 41 3322.2500 | 41 985.352.500 </span> <br>
 						<br>
@@ -541,7 +563,7 @@
 					<img src="img/Logo.svg">
 				</div>
 				<div class="row space-board">
-					<div class="menu-left col-md-9">
+					<div id="t1" class="menu-left col-md-9">
 
 					</div>
 					<div class="col-md-3">
