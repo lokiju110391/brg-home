@@ -66,9 +66,12 @@ a, a:hover, a:active, a:visited, a:focus {
 }
 
 .menu-topo-brg {
-	height: 85px;
 	width: 100%;
 	background-color: #1f140e;
+	position: fixed;
+    width: 100%;
+    z-index: 900000;
+    height: 65px;  	
 }
 
 .menu-text-branco {
@@ -77,11 +80,19 @@ a, a:hover, a:active, a:visited, a:focus {
 	font-size: 16px;
 }
 
+.menu-text-branco:hover {
+	color: #8e5831;
+}
+
 
 .menu-text-ativo {
 	color: #8d5934;
 	font-weight: 500;
 	font-size: 16px;
+}
+
+.menu-text-ativo:hover {
+	color: #8e5831;
 }
 
 .alinhamento-central {
@@ -130,7 +141,7 @@ a, a:hover, a:active, a:visited, a:focus {
 
 .paragrafo-informative {
 	text-align: justify;
-	font-size: 16px;
+	font-size: 20px;
 	font-weight: 500;
 	color: #aa8367;
 	padding-bottom: 40px;
@@ -138,10 +149,11 @@ a, a:hover, a:active, a:visited, a:focus {
 
 .paragrafo-quote {
 	text-align: justify;
-	font-size: 32px;
+	font-size: 40px;
 	font-weight: 600;
 	color: #aa8367;
 	padding-bottom: 25px;
+	margin-left: 30%;
 }
 
 .paragrafo-quote-autor {
@@ -170,7 +182,7 @@ a, a:hover, a:active, a:visited, a:focus {
 
 .paragrafo-informative-white {
 	text-align: justify;
-	font-size: 16px;
+	font-size: 20px;
 	font-weight: 500;
 	color: #ffffff;
 	padding-bottom: 40px;
@@ -201,14 +213,13 @@ a, a:hover, a:active, a:visited, a:focus {
 .avatar-card-name {
 	color: #FFFFFF;
 	font-weight: 600;
-	font-size: 22px;
+	font-size: 18px;
 	margin-bottom: 10px;	
 }
 
 .avatar-card-text {
 	text-align: left !important;
-	height: 330px;
-	padding-bottom: 15px;
+	padding-bottom: 5px;
 	padding-top: 15px;
 	border: 1px solid #6f4425;
 	padding-left: 10px;
@@ -245,7 +256,7 @@ a, a:hover, a:active, a:visited, a:focus {
 
 .paragrafo-informative-brow {
 	text-align: justify;
-	font-size: 16px;
+	font-size: 20px;
 	font-weight: 500;
 	color: #442a1b;
 	padding-bottom: 40px;
@@ -253,7 +264,7 @@ a, a:hover, a:active, a:visited, a:focus {
 
 .paragrafo-segmento-brow {
 	text-align: justify;
-	font-size: 16px;
+	font-size: 20px;
 	font-weight: 500;
 	color: #442a1b;
 }
@@ -432,6 +443,14 @@ a, a:hover, a:active, a:visited, a:focus {
 
 	.bunner-principal {
 		height: 500px !important;
+	}
+
+	.avatar-card-name {
+		text-align: center;
+	}
+
+	.paragrafo-quote {
+		margin-left: 0px !important;
 	}
 
 }

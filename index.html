@@ -25,13 +25,105 @@
 				var uluru = {lat: -25.430757, lng: -49.267961};
 				// The map, centered at Uluru
 				var map = new google.maps.Map(
-				document.getElementById('map'), {zoom: 17, center: uluru});
+				
+				document.getElementById('map'), {
+													zoom: 17,
+				 									center: uluru,
+				 									styles: [
+											            {elementType: 'geometry', stylers: [{color: '#242f3e'}]},
+											            {elementType: 'labels.text.stroke', stylers: [{color: '#242f3e'}]},
+											            {elementType: 'labels.text.fill', stylers: [{color: '#746855'}]},
+											            {
+											              featureType: 'administrative.locality',
+											              elementType: 'labels.text.fill',
+											              stylers: [{color: '#d59563'}]
+											            },
+											            {
+											              featureType: 'poi',
+											              elementType: 'labels.text.fill',
+											              stylers: [{color: '#d59563'}]
+											            },
+											            {
+											              featureType: 'poi.park',
+											              elementType: 'geometry',
+											              stylers: [{color: '#263c3f'}]
+											            },
+											            {
+											              featureType: 'poi.park',
+											              elementType: 'labels.text.fill',
+											              stylers: [{color: '#6b9a76'}]
+											            },
+											            {
+											              featureType: 'road',
+											              elementType: 'geometry',
+											              stylers: [{color: '#38414e'}]
+											            },
+											            {
+											              featureType: 'road',
+											              elementType: 'geometry.stroke',
+											              stylers: [{color: '#212a37'}]
+											            },
+											            {
+											              featureType: 'road',
+											              elementType: 'labels.text.fill',
+											              stylers: [{color: '#9ca5b3'}]
+											            },
+											            {
+											              featureType: 'road.highway',
+											              elementType: 'geometry',
+											              stylers: [{color: '#746855'}]
+											            },
+											            {
+											              featureType: 'road.highway',
+											              elementType: 'geometry.stroke',
+											              stylers: [{color: '#1f2835'}]
+											            },
+											            {
+											              featureType: 'road.highway',
+											              elementType: 'labels.text.fill',
+											              stylers: [{color: '#f3d19c'}]
+											            },
+											            {
+											              featureType: 'transit',
+											              elementType: 'geometry',
+											              stylers: [{color: '#2f3948'}]
+											            },
+											            {
+											              featureType: 'transit.station',
+											              elementType: 'labels.text.fill',
+											              stylers: [{color: '#d59563'}]
+											            },
+											            {
+											              featureType: 'water',
+											              elementType: 'geometry',
+											              stylers: [{color: '#17263c'}]
+											            },
+											            {
+											              featureType: 'water',
+											              elementType: 'labels.text.fill',
+											              stylers: [{color: '#515c6d'}]
+											            },
+											            {
+											              featureType: 'water',
+											              elementType: 'labels.text.stroke',
+											              stylers: [{color: '#17263c'}]
+											            }
+											          ]
+				 								});
+
 				// The marker, positioned at Uluru
 				var marker = new google.maps.Marker({position: uluru, map: map});
 			}
 			
 			$( document ).ready(function() {
 				initMap();
+
+				// Ajsutar Tamanhos
+				valor = $( "#t2-a" ).height();
+
+				$( "#t1-a" ).height(valor);
+				$( "#t3-a" ).height(valor);
+
 			});
 			
 		</script>			
@@ -161,7 +253,7 @@
 					<h2 class="titulo-branco">Soluções jurídicas eficientes.</h2>
 					<div class="separador-tipo-1"></div>
 					<div class="brg-mobile" style="width: 600px; margin: auto;">
-						<span class="info-branco"> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc eget maximus erat. Vestibulum vitae nisl a purus pellentesque faucibus id sed leo. </span>
+						<span class="info-branco"> O BRG Advogados entende que cada problema demanda uma solução específica. Venha conhecer propostas inovadoras. </span>
 					</div>
 				</div>
 			</div>
@@ -173,7 +265,7 @@
 		<div class="container">
 
 			<div class="text-center title-session-color">
-				<h1>SOBRE NOS</h1>
+				<h1>APRESENTAÇÃO</h1>
 			</div>
 
 			<div class="paragrafo-informative">				
@@ -234,8 +326,8 @@
 				<div class="row avatar-area">
 					
 					<div class="col-md-4 avatar-card">						
-						<img class="avatar-card-photo" src="img/IMG_7963.jpg">
-						<div class="text-center avatar-card-text">
+						<img class="avatar-card-photo" src="img/IMG_7963-2.jpg">
+						<div class="text-center avatar-card-text" id="t1-a">
 							<div class="avatar-card-name"> GABRIEL RICARDO BORA </div>
 							<div class="avatar-card-info"> • Advogado inscrito na Ordem dos Advogados do Brasil – Seção do Paraná - sob o nº. 65.969. </div> 
 							<div class="avatar-card-info"> • Especialista em Direito Processual Civil (2014) pelo Instituto Romeu Felipe Bacellar. </div> 
@@ -244,8 +336,8 @@
 					</div>
 					
 					<div class="col-md-4 avatar-card">						
-						<img class="avatar-card-photo" src="img/IMG_7980.jpg">
-						<div class="text-center avatar-card-text">
+						<img class="avatar-card-photo" src="img/IMG_7980-2.jpg">
+						<div class="text-center avatar-card-text" id="t2-a">
 							<div class="avatar-card-name"> GUILHERME RECKA DE ALMEIDA  </div>
 							<div class="avatar-card-info"> • Advogado inscrito na Ordem dos Advogados do Brasil – Seção do Paraná - sob o nº. 65.970. </div> 
 							<div class="avatar-card-info"> • Especialista em Direito Constitucional (2014) pela Fundação Escola do Ministério Público do Estado do Paraná - FEMPAR. </div> 
@@ -254,8 +346,8 @@
 					</div>
 					
 					<div class="col-md-4 avatar-card">						
-						<img class="avatar-card-photo" src="img/IMG_7968.jpg">
-						<div class="text-center avatar-card-text">
+						<img class="avatar-card-photo" src="img/IMG_7968-2.jpg">
+						<div class="text-center avatar-card-text" id="t3-a">
 							<div class="avatar-card-name"> MARCUS VINÍCIUS SIQUEIRA GOMES </div>
 							<div class="avatar-card-info"> • Advogado inscrito na Ordem dos Advogados do Brasil – Seção do Paraná - sob o nº. 86.009. </div> 
 							<div class="avatar-card-info"> • Especialista em Direito Administrativo (2018) pelo Instituto Romeu Felipe Bacellar. </div> 
@@ -342,7 +434,7 @@
 						<div class="row">
 							
 							<div class="col-md-12 text-center" style="margin-top: auto; margin-bottom: auto; padding-bottom: 50px;">
-								<img src="img/adv_icon.svg" width="150px;">
+								<img src="img/pen_icon.svg" width="150px;">
 							</div>
 							
 							<div class="col-md-12 paragrafo-segmento-brow">
@@ -376,8 +468,8 @@
 				
 				<div class="separador-tipo-2"></div>
 				
-				<div class="paragrafo-informative-brow">				
-					<span>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</span>
+				<div class="paragrafo-informative-brow" style="text-align: center;">				
+					<span>Conheça e acompanhe os principais Tribunais e alguns dos maiores portais geradores de conteúdo jurídico do Brasil:</span>
 				</div>
 				
 				<div class="card-noticia-1 text-center"> 
@@ -445,23 +537,12 @@
 		
 		<div class="campo-footer">
 			<div class="container">
-				<div class="row alinhamento-central">
-					<div class="col-md-2">
-						<img src="img/Logo.svg">
-					</div>
-					<div class="col-md-10">
-						<span class="simple-white">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.</span>
-					</div>
-
+				<div class="text-center">
+					<img src="img/Logo.svg">
 				</div>
 				<div class="row space-board">
 					<div class="menu-left col-md-9">
-				    	<a class="p-2 menu-text-ativo" href="#">HOME</a>
-				    	<a class="p-2 menu-text-branco" href="#">SOBRE NOS</a>
-				    	<a class="p-2 menu-text-branco" href="#">PROFISSIONAIS</a>
-				    	<a class="p-2 menu-text-branco" href="#">ATUACAO</a>
-				    	<a class="p-2 menu-text-branco" href="#">NOTICIAS</a>
-				    	<a class="p-2 menu-text-branco" href="#">CONTATO</a>
+
 					</div>
 					<div class="col-md-3">
 						<span class="simple-bold simple-white">Copyright © 2019 - BRG Advogados</span>
