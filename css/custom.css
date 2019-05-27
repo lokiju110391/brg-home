@@ -134,7 +134,7 @@ a, a:hover, a:active, a:visited, a:focus {
 
 .title-session-color {
 	padding-top: 30px;
-	padding-bottom: 40px;
+	padding-bottom: 25px;
 	color: #442a1b;
 	font-weight: bold;
 }
@@ -174,8 +174,8 @@ a, a:hover, a:active, a:visited, a:focus {
 }
 
 .title-session-white {
-	padding-top: 40px;
-	padding-bottom: 40px;
+	padding-top: 30px;
+	padding-bottom: 25px;
 	color: #ffffff;
 	font-weight: bold;
 }
@@ -250,8 +250,8 @@ li {
 }
 
 .title-session-brow {
-	padding-top: 40px;
-	padding-bottom: 40px;
+	padding-top: 30px;
+	padding-bottom: 25px;
 	color: #442a1b;
 	font-weight: bold;
 }
@@ -281,7 +281,7 @@ li {
 	color: #442a1b;
 	border: 1px solid #6f4425;
 	padding: 10px !important;
-	height: 360px;
+	height: 490px;
 }
 
 .simple-bold {

@@ -23,13 +23,15 @@
 
 		<script type="text/javascript">
 			
+			$('#myCarousel').carousel({
+				interval:   4000
+			});
+
 			function manifesto_click() {
 
 				$('html, body').animate({
 			        scrollTop: $('#t1').offset().top
 			    },10000)
-
-
 
 			}
 
@@ -268,19 +270,88 @@
 
 		<!-- Bunner 1 -->
 
-			<div class="bunner-principal">
-				<div style="margin-top: auto; margin-bottom: auto;">		
-					<img class="brg-mobile" alt="Logo BRG" src="img/Logo_big.svg" width="600px;" style="padding-top: 40px;">
-					<h2 class="titulo-branco">Soluções jurídicas eficientes.</h2>
-					<div class="separador-tipo-1"></div>
-					<div class="brg-mobile" style="width: 600px; margin: auto;">
-						<span class="info-branco">
-							O BRG Advogados entende que cada problema demanda uma solução específica. <br> 
-							Venha conhecer propostas inovadoras. 
-						</span>
-					</div>
-				</div>
-			</div>
+
+
+
+	<div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+  <ol class="carousel-indicators">
+    <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+    <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+    <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+  </ol>
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <div class="bunner-principal">
+							<div style="margin-top: auto; margin-bottom: auto;">		
+								<img class="brg-mobile" alt="Logo BRG" src="img/Logo_big.svg" width="600px;" style="padding-top: 40px;">
+								<h2 class="titulo-branco">Soluções jurídicas eficientes.</h2>
+								<div class="separador-tipo-1"></div>
+								<div class="brg-mobile" style="width: 600px; margin: auto;">
+									<span class="info-branco">
+										O BRG Advogados entende que cada problema demanda uma solução específica. <br> 
+										Venha conhecer propostas inovadoras 1.
+									</span>
+								</div>
+							</div>
+						</div>
+    </div>
+    <div class="carousel-item">
+      <div class="bunner-principal">
+							<div style="margin-top: auto; margin-bottom: auto;">		
+								<img class="brg-mobile" alt="Logo BRG" src="img/Logo_big.svg" width="600px;" style="padding-top: 40px;">
+								<h2 class="titulo-branco">Soluções jurídicas eficientes.</h2>
+								<div class="separador-tipo-1"></div>
+								<div class="brg-mobile" style="width: 600px; margin: auto;">
+									<span class="info-branco">
+										O BRG Advogados entende que cada problema demanda uma solução específica. <br> 
+										Venha conhecer propostas inovadoras 2.
+									</span>
+								</div>
+							</div>
+						</div>
+    </div>
+    <div class="carousel-item">
+      <div class="bunner-principal">
+							<div style="margin-top: auto; margin-bottom: auto;">		
+								<img class="brg-mobile" alt="Logo BRG" src="img/Logo_big.svg" width="600px;" style="padding-top: 40px;">
+								<h2 class="titulo-branco">Soluções jurídicas eficientes.</h2>
+								<div class="separador-tipo-1"></div>
+								<div class="brg-mobile" style="width: 600px; margin: auto;">
+									<span class="info-branco">
+										O BRG Advogados entende que cada problema demanda uma solução específica. <br> 
+										Venha conhecer propostas inovadoras 3.
+									</span>
+								</div>
+							</div>
+						</div>
+    </div>
+  </div>
+  <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="sr-only">Previous</span>
+  </a>
+  <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="sr-only">Next</span>
+  </a>
+</div>
+
+
+
+
+
+
+
+
+						
+
+
+
+
+
+
+
+
 
 		<!-- Fim Bunner 1 -->
 		
@@ -401,15 +472,16 @@
 				
 				<div class="row">
 					
-					<div class="col-md-4 card-segmento">
+					<div class="col-xl-4 col-lg-6 col-md-6 col-sm-12 card-segmento">
 						
 						<div class="row" style="padding: 5px;">
 							
-							<div class="col-md-12 text-center" style="margin-top: auto; margin-bottom: auto; padding-bottom: 50px;">
-								<img src="img/icone_martelo.png" width="115px;">
-							</div>
-							
 							<div class="col-md-12 paragrafo-segmento-brow">
+
+								<div class="col-md-12 text-center" style="margin-top: auto; margin-bottom: auto; padding-bottom: 20px; padding-top: 10px;">
+									<img src="img/icone_martelo.png" width="115px;">
+								</div>
+
 								<h4 class="simple-bold text-center">Direito Civil</h4>
 								<span>				
 									<li> Direito bancário, operações financeiras e títulos de crédito; <br> </li>
@@ -429,14 +501,15 @@
 						
 					</div>
 					
-					<div class="col-md-4 card-segmento">
+					<div class="col-xl-4 col-lg-6 col-md-6 col-sm-12 card-segmento">
 						<div class="row" style="padding: 5px;">
-							
-							<div class="col-md-12 text-center" style="margin-top: auto; margin-bottom: auto; padding-bottom: 50px;">
-								<img src="img/icone_balanca.png" width="115px;">
-							</div>
-							
+												
 							<div class="col-md-12 paragrafo-segmento-brow">
+
+								<div class="col-md-12 text-center" style="margin-top: auto; margin-bottom: auto; padding-bottom: 20px; padding-top: 10px;">
+									<img src="img/icone_balanca.png" width="115px;">
+								</div>
+
 								<h4 class="simple-bold text-center">Direito Administrativo</h4>
 								<span>
 									<li> Processos licitatórios e contratos administrativos; <br> </li>
@@ -453,14 +526,15 @@
 						</div>
 					</div>
 					
-					<div class="col-md-4 card-segmento">
+					<div class="col-xl-4 col-lg-6 col-md-6 col-sm-12 card-segmento">
 						<div class="row" style="padding: 5px;">
-							
-							<div class="col-md-12 text-center" style="margin-top: auto; margin-bottom: auto; padding-bottom: 50px;">
-								<img src="img/icone_urna.png" width="115px;">
-							</div>
-							
+													
 							<div class="col-md-12 paragrafo-segmento-brow">
+
+								<div class="col-md-12 text-center" style="margin-top: auto; margin-bottom: auto; padding-bottom: 20px; padding-top: 10px;">
+									<img src="img/icone_urna.png" width="115px;">
+								</div>
+
 								<h4 class="simple-bold text-center">Direito Eleitoral</h4>
 								<span>
 									<li> Atuação preventiva e consultiva geral; <br> </li>
