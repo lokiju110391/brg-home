@@ -1,0 +1,786 @@
+/*!
+ * jQuery Raty - A Star Rating Plugin
+ *
+ * The MIT License
+ *
+ * @author  : Washington Botelho
+ * @doc     : http://wbotelhos.com/raty
+ * @version : 2.7.1
+ *
+ */
+
+;
+(function($) {
+  'use strict';
+
+  var methods = {
+    init: function(options) {
+      return this.each(function() {
+        this.self = $(this);
+
+        methods.destroy.call(this.self);
+
+        this.opt = $.extend(true, {}, $.fn.raty.defaults, options);
+
+        methods._adjustCallback.call(this);
+        methods._adjustNumber.call(this);
+        methods._adjustHints.call(this);
+
+        this.opt.score = methods._adjustedScore.call(this, this.opt.score);
+
+        if (this.opt.starType !== 'img') {
+          methods._adjustStarType.call(this);
+        }
+
+        methods._adjustPath.call(this);
+        methods._createStars.call(this);
+
+        if (this.opt.cancel) {
+          methods._createCancel.call(this);
+        }
+
+        if (this.opt.precision) {
+          methods._adjustPrecision.call(this);
+        }
+
+        methods._createScore.call(this);
+        methods._apply.call(this, this.opt.score);
+        methods._setTitle.call(this, this.opt.score);
+        methods._target.call(this, this.opt.score);
+
+        if (this.opt.readOnly) {
+          methods._lock.call(this);
+        } else {
+          this.style.cursor = 'pointer';
+
+          methods._binds.call(this);
+        }
+      });
+    },
+
+    _adjustCallback: function() {
+      var options = ['number', 'readOnly', 'score', 'scoreName', 'target', 'path'];
+
+      for (var i = 0; i < options.length; i++) {
+        if (typeof this.opt[options[i]] === 'function') {
+          this.opt[options[i]] = this.opt[options[i]].call(this);
+        }
+      }
+    },
+
+    _adjustedScore: function(score) {
+      if (!score) {
+        return score;
+      }
+
+      return methods._between(score, 0, this.opt.number);
+    },
+
+    _adjustHints: function() {
+      if (!this.opt.hints) {
+        this.opt.hints = [];
+      }
+
+      if (!this.opt.halfShow && !this.opt.half) {
+        return;
+      }
+
+      var steps = this.opt.precision ? 10 : 2;
+
+      for (var i = 0; i < this.opt.number; i++) {
+        var group = this.opt.hints[i];
+
+        if (Object.prototype.toString.call(group) !== '[object Array]') {
+          group = [group];
+        }
+
+        this.opt.hints[i] = [];
+
+        for (var j = 0; j < steps; j++) {
+          var
+            hint = group[j],
+            last = group[group.length - 1];
+
+          if (last === undefined) {
+            last = null;
+          }
+
+          this.opt.hints[i][j] = hint === undefined ? last : hint;
+        }
+      }
+    },
+
+    _adjustNumber: function() {
+      this.opt.number = methods._between(this.opt.number, 1, this.opt.numberMax);
+    },
+
+    _adjustPath: function() {
+      this.opt.path = this.opt.path || '';
+
+      if (this.opt.path && this.opt.path.charAt(this.opt.path.length - 1) !== '/') {
+        this.opt.path += '/';
+      }
+    },
+
+    _adjustPrecision: function() {
+      this.opt.half = true;
+    },
+
+    _adjustStarType: function() {
+      var replaces = ['cancelOff', 'cancelOn', 'starHalf', 'starOff', 'starOn'];
+
+      this.opt.path = '';
+
+      for (var i = 0; i < replaces.length; i++) {
+        this.opt[replaces[i]] = this.opt[replaces[i]].replace('.', '-');
+      }
+    },
+
+    _apply: function(score) {
+      methods._fill.call(this, score);
+
+      if (score) {
+        if (score > 0) {
+          this.score.val(score);
+        }
+
+        methods._roundStars.call(this, score);
+      }
+    },
+
+    _between: function(value, min, max) {
+      return Math.min(Math.max(parseFloat(value), min), max);
+    },
+
+    _binds: function() {
+      if (this.cancel) {
+        methods._bindOverCancel.call(this);
+        methods._bindClickCancel.call(this);
+        methods._bindOutCancel.call(this);
+      }
+
+      methods._bindOver.call(this);
+      methods._bindClick.call(this);
+      methods._bindOut.call(this);
+    },
+
+    _bindClick: function() {
+      var that = this;
+
+      that.stars.on('click.raty', function(evt) {
+        var
+          execute = true,
+          score   = (that.opt.half || that.opt.precision) ? that.self.data('score') : (this.alt || $(this).data('alt'));
+
+        if (that.opt.click) {
+          execute = that.opt.click.call(that, +score, evt);
+        }
+
+        if (execute || execute === undefined) {
+          if (that.opt.half && !that.opt.precision) {
+            score = methods._roundHalfScore.call(that, score);
+          }
+
+          methods._apply.call(that, score);
+        }
+      });
+    },
+
+    _bindClickCancel: function() {
+      var that = this;
+
+      that.cancel.on('click.raty', function(evt) {
+        that.score.removeAttr('value');
+
+        if (that.opt.click) {
+          that.opt.click.call(that, null, evt);
+        }
+      });
+    },
+
+    _bindOut: function() {
+      var that = this;
+
+      that.self.on('mouseleave.raty', function(evt) {
+        var score = +that.score.val() || undefined;
+
+        methods._apply.call(that, score);
+        methods._target.call(that, score, evt);
+        methods._resetTitle.call(that);
+
+        if (that.opt.mouseout) {
+          that.opt.mouseout.call(that, score, evt);
+        }
+      });
+    },
+
+    _bindOutCancel: function() {
+      var that = this;
+
+      that.cancel.on('mouseleave.raty', function(evt) {
+        var icon = that.opt.cancelOff;
+
+        if (that.opt.starType !== 'img') {
+          icon = that.opt.cancelClass + ' ' + icon;
+        }
+
+        methods._setIcon.call(that, this, icon);
+
+        if (that.opt.mouseout) {
+          var score = +that.score.val() || undefined;
+
+          that.opt.mouseout.call(that, score, evt);
+        }
+      });
+    },
+
+    _bindOver: function() {
+      var that   = this,
+          action = that.opt.half ? 'mousemove.raty' : 'mouseover.raty';
+
+      that.stars.on(action, function(evt) {
+        var score = methods._getScoreByPosition.call(that, evt, this);
+
+        methods._fill.call(that, score);
+
+        if (that.opt.half) {
+          methods._roundStars.call(that, score, evt);
+          methods._setTitle.call(that, score, evt);
+
+          that.self.data('score', score);
+        }
+
+        methods._target.call(that, score, evt);
+
+        if (that.opt.mouseover) {
+          that.opt.mouseover.call(that, score, evt);
+        }
+      });
+    },
+
+    _bindOverCancel: function() {
+      var that = this;
+
+      that.cancel.on('mouseover.raty', function(evt) {
+        var
+          starOff = that.opt.path + that.opt.starOff,
+          icon    = that.opt.cancelOn;
+
+        if (that.opt.starType === 'img') {
+          that.stars.attr('src', starOff);
+        } else {
+          icon = that.opt.cancelClass + ' ' + icon;
+
+          that.stars.attr('class', starOff);
+        }
+
+        methods._setIcon.call(that, this, icon);
+        methods._target.call(that, null, evt);
+
+        if (that.opt.mouseover) {
+          that.opt.mouseover.call(that, null);
+        }
+      });
+    },
+
+    _buildScoreField: function() {
+      return $('<input />', { name: this.opt.scoreName, type: 'hidden' }).appendTo(this);
+    },
+
+    _createCancel: function() {
+      var icon   = this.opt.path + this.opt.cancelOff,
+          cancel = $('<' + this.opt.starType + ' />', { title: this.opt.cancelHint, 'class': this.opt.cancelClass });
+
+      if (this.opt.starType === 'img') {
+        cancel.attr({ src: icon, alt: 'x' });
+      } else {
+        // TODO: use $.data
+        cancel.attr('data-alt', 'x').addClass(icon);
+      }
+
+      if (this.opt.cancelPlace === 'left') {
+        this.self.prepend('&#160;').prepend(cancel);
+      } else {
+        this.self.append('&#160;').append(cancel);
+      }
+
+      this.cancel = cancel;
+    },
+
+    _createScore: function() {
+      var score = $(this.opt.targetScore);
+
+      this.score = score.length ? score : methods._buildScoreField.call(this);
+    },
+
+    _createStars: function() {
+      for (var i = 1; i <= this.opt.number; i++) {
+        var
+          name  = methods._nameForIndex.call(this, i),
+          attrs = { alt: i, src: this.opt.path + this.opt[name] };
+
+        if (this.opt.starType !== 'img') {
+          attrs = { 'data-alt': i, 'class': attrs.src }; // TODO: use $.data.
+        }
+
+        attrs.title = methods._getHint.call(this, i);
+
+        $('<' + this.opt.starType + ' />', attrs).appendTo(this);
+
+        if (this.opt.space) {
+          this.self.append(i < this.opt.number ? '&#160;' : '');
+        }
+      }
+
+      this.stars = this.self.children(this.opt.starType);
+    },
+
+    _error: function(message) {
+      $(this).text(message);
+
+      $.error(message);
+    },
+
+    _fill: function(score) {
+      var hash = 0;
+
+      for (var i = 1; i <= this.stars.length; i++) {
+        var
+          icon,
+          star   = this.stars[i - 1],
+          turnOn = methods._turnOn.call(this, i, score);
+
+        if (this.opt.iconRange && this.opt.iconRange.length > hash) {
+          var irange = this.opt.iconRange[hash];
+
+          icon = methods._getRangeIcon.call(this, irange, turnOn);
+
+          if (i <= irange.range) {
+            methods._setIcon.call(this, star, icon);
+          }
+
+          if (i === irange.range) {
+            hash++;
+          }
+        } else {
+          icon = this.opt[turnOn ? 'starOn' : 'starOff'];
+
+          methods._setIcon.call(this, star, icon);
+        }
+      }
+    },
+
+    _getFirstDecimal: function(number) {
+      var
+        decimal = number.toString().split('.')[1],
+        result  = 0;
+
+      if (decimal) {
+        result = parseInt(decimal.charAt(0), 10);
+
+        if (decimal.slice(1, 5) === '9999') {
+          result++;
+        }
+      }
+
+      return result;
+    },
+
+    _getRangeIcon: function(irange, turnOn) {
+      return turnOn ? irange.on || this.opt.starOn : irange.off || this.opt.starOff;
+    },
+
+    _getScoreByPosition: function(evt, icon) {
+      var score = parseInt(icon.alt || icon.getAttribute('data-alt'), 10);
+
+      if (this.opt.half) {
+        var
+          size    = methods._getWidth.call(this),
+          percent = parseFloat((evt.pageX - $(icon).offset().left) / size);
+
+        score = score - 1 + percent;
+      }
+
+      return score;
+    },
+
+    _getHint: function(score, evt) {
+      if (score !== 0 && !score) {
+        return this.opt.noRatedMsg;
+      }
+
+      var
+        decimal = methods._getFirstDecimal.call(this, score),
+        integer = Math.ceil(score),
+        group   = this.opt.hints[(integer || 1) - 1],
+        hint    = group,
+        set     = !evt || this.move;
+
+      if (this.opt.precision) {
+        if (set) {
+          decimal = decimal === 0 ? 9 : decimal - 1;
+        }
+
+        hint = group[decimal];
+      } else if (this.opt.halfShow || this.opt.half) {
+        decimal = set && decimal === 0 ? 1 : decimal > 5 ? 1 : 0;
+
+        hint = group[decimal];
+      }
+
+      return hint === '' ? '' : hint || score;
+    },
+
+    _getWidth: function() {
+      var width = this.stars[0].width || parseFloat(this.stars.eq(0).css('font-size'));
+
+      if (!width) {
+        methods._error.call(this, 'Could not get the icon width!');
+      }
+
+      return width;
+    },
+
+    _lock: function() {
+      var hint = methods._getHint.call(this, this.score.val());
+
+      this.style.cursor = '';
+      this.title        = hint;
+
+      this.score.prop('readonly', true);
+      this.stars.prop('title', hint);
+
+      if (this.cancel) {
+        this.cancel.hide();
+      }
+
+      this.self.data('readonly', true);
+    },
+
+    _nameForIndex: function(i) {
+      return this.opt.score && this.opt.score >= i ? 'starOn' : 'starOff';
+    },
+
+    _resetTitle: function(star) {
+      for (var i = 0; i < this.opt.number; i++) {
+        this.stars[i].title = methods._getHint.call(this, i + 1);
+      }
+    },
+
+     _roundHalfScore: function(score) {
+      var integer = parseInt(score, 10),
+          decimal = methods._getFirstDecimal.call(this, score);
+
+      if (decimal !== 0) {
+        decimal = decimal > 5 ? 1 : 0.5;
+      }
+
+      return integer + decimal;
+    },
+
+    _roundStars: function(score, evt) {
+      var
+        decimal = (score % 1).toFixed(2),
+        name    ;
+
+      if (evt || this.move) {
+        name = decimal > 0.5 ? 'starOn' : 'starHalf';
+      } else if (decimal > this.opt.round.down) {               // Up:   [x.76 .. x.99]
+        name = 'starOn';
+
+        if (this.opt.halfShow && decimal < this.opt.round.up) { // Half: [x.26 .. x.75]
+          name = 'starHalf';
+        } else if (decimal < this.opt.round.full) {             // Down: [x.00 .. x.5]
+          name = 'starOff';
+        }
+      }
+
+      if (name) {
+        var
+          icon = this.opt[name],
+          star = this.stars[Math.ceil(score) - 1];
+
+        methods._setIcon.call(this, star, icon);
+      }                                                         // Full down: [x.00 .. x.25]
+    },
+
+    _setIcon: function(star, icon) {
+      star[this.opt.starType === 'img' ? 'src' : 'className'] = this.opt.path + icon;
+    },
+
+    _setTarget: function(target, score) {
+      if (score) {
+        score = this.opt.targetFormat.toString().replace('{score}', score);
+      }
+
+      if (target.is(':input')) {
+        target.val(score);
+      } else {
+        target.html(score);
+      }
+    },
+
+    _setTitle: function(score, evt) {
+      if (score) {
+        var
+          integer = parseInt(Math.ceil(score), 10),
+          star    = this.stars[integer - 1];
+
+        star.title = methods._getHint.call(this, score, evt);
+      }
+    },
+
+    _target: function(score, evt) {
+      if (this.opt.target) {
+        var target = $(this.opt.target);
+
+        if (!target.length) {
+          methods._error.call(this, 'Target selector invalid or missing!');
+        }
+
+        var mouseover = evt && evt.type === 'mouseover';
+
+        if (score === undefined) {
+          score = this.opt.targetText;
+        } else if (score === null) {
+          score = mouseover ? this.opt.cancelHint : this.opt.targetText;
+        } else {
+          if (this.opt.targetType === 'hint') {
+            score = methods._getHint.call(this, score, evt);
+          } else if (this.opt.precision) {
+            score = parseFloat(score).toFixed(1);
+          }
+
+          var mousemove = evt && evt.type === 'mousemove';
+
+          if (!mouseover && !mousemove && !this.opt.targetKeep) {
+            score = this.opt.targetText;
+          }
+        }
+
+        methods._setTarget.call(this, target, score);
+      }
+    },
+
+    _turnOn: function(i, score) {
+      return this.opt.single ? (i === score) : (i <= score);
+    },
+
+    _unlock: function() {
+      this.style.cursor = 'pointer';
+      this.removeAttribute('title');
+
+      this.score.removeAttr('readonly');
+
+      this.self.data('readonly', false);
+
+      for (var i = 0; i < this.opt.number; i++) {
+        this.stars[i].title = methods._getHint.call(this, i + 1);
+      }
+
+      if (this.cancel) {
+        this.cancel.css('display', '');
+      }
+    },
+
+    cancel: function(click) {
+      return this.each(function() {
+        var self = $(this);
+
+        if (self.data('readonly') !== true) {
+          methods[click ? 'click' : 'score'].call(self, null);
+
+          this.score.removeAttr('value');
+        }
+      });
+    },
+
+    click: function(score) {
+      return this.each(function() {
+        if ($(this).data('readonly') !== true) {
+          score = methods._adjustedScore.call(this, score);
+
+          methods._apply.call(this, score);
+
+          if (this.opt.click) {
+            this.opt.click.call(this, score, $.Event('click'));
+          }
+
+          methods._target.call(this, score);
+        }
+      });
+    },
+
+    destroy: function() {
+      return this.each(function() {
+        var self = $(this),
+            raw  = self.data('raw');
+
+        if (raw) {
+          self.off('.raty').empty().css({ cursor: raw.style.cursor }).removeData('readonly');
+        } else {
+          self.data('raw', self.clone()[0]);
+        }
+      });
+    },
+
+    getScore: function() {
+      var score = [],
+          value ;
+
+      this.each(function() {
+        value = this.score.val();
+
+        score.push(value ? +value : undefined);
+      });
+
+      return (score.length > 1) ? score : score[0];
+    },
+
+    move: function(score) {
+      return this.each(function() {
+        var
+          integer  = parseInt(score, 10),
+          decimal  = methods._getFirstDecimal.call(this, score);
+
+        if (integer >= this.opt.number) {
+          integer = this.opt.number - 1;
+          decimal = 10;
+        }
+
+        var
+          width   = methods._getWidth.call(this),
+          steps   = width / 10,
+          star    = $(this.stars[integer]),
+          percent = star.offset().left + steps * decimal,
+          evt     = $.Event('mousemove', { pageX: percent });
+
+        this.move = true;
+
+        star.trigger(evt);
+
+        this.move = false;
+      });
+    },
+
+    readOnly: function(readonly) {
+      return this.each(function() {
+        var self = $(this);
+
+        if (self.data('readonly') !== readonly) {
+          if (readonly) {
+            self.off('.raty').children(this.opt.starType).off('.raty');
+
+            methods._lock.call(this);
+          } else {
+            methods._binds.call(this);
+            methods._unlock.call(this);
+          }
+
+          self.data('readonly', readonly);
+        }
+      });
+    },
+
+    reload: function() {
+      return methods.set.call(this, {});
+    },
+
+    score: function() {
+      var self = $(this);
+
+      return arguments.length ? methods.setScore.apply(self, arguments) : methods.getScore.call(self);
+    },
+
+    set: function(options) {
+      return this.each(function() {
+        $(this).raty($.extend({}, this.opt, options));
+      });
+    },
+
+    setScore: function(score) {
+      return this.each(function() {
+        if ($(this).data('readonly') !== true) {
+          score = methods._adjustedScore.call(this, score);
+
+          methods._apply.call(this, score);
+          methods._target.call(this, score);
+        }
+      });
+    }
+  };
+
+  $.fn.raty = function(method) {
+    if (methods[method]) {
+      return methods[method].apply(this, Array.prototype.slice.call(arguments, 1));
+    } else if (typeof method === 'object' || !method) {
+      return methods.init.apply(this, arguments);
+    } else {
+      $.error('Method ' + method + ' does not exist!');
+    }
+  };
+
+  $.fn.raty.defaults = {
+    cancel       : false,
+    cancelClass  : 'raty-cancel',
+    cancelHint   : 'Cancel this rating!',
+    cancelOff    : 'cancel-off.png',
+    cancelOn     : 'cancel-on.png',
+    cancelPlace  : 'left',
+    click        : undefined,
+    half         : false,
+    halfShow     : true,
+    hints        : ['bad', 'poor', 'regular', 'good', 'gorgeous'],
+    iconRange    : undefined,
+    mouseout     : undefined,
+    mouseover    : undefined,
+    noRatedMsg   : 'Not rated yet!',
+    number       : 5,
+    numberMax    : 20,
+    path         : undefined,
+    precision    : false,
+    readOnly     : false,
+    round        : { down: 0.25, full: 0.6, up: 0.76 },
+    score        : undefined,
+    scoreName    : 'score',
+    single       : false,
+    space        : true,
+    starHalf     : 'star-half.png',
+    starOff      : 'star-off.png',
+    starOn       : 'star-on.png',
+    starType     : 'img',
+    target       : undefined,
+    targetFormat : '{score}',
+    targetKeep   : false,
+    targetScore  : undefined,
+    targetText   : '',
+    targetType   : 'hint'
+  };
+
+})(jQuery);
+2#eN	¿      \«è\«ê@NÛw\ ¯˙   C    :https://extensions.gnome.org/static/js/jquery.raty.776582dda6f7.js necko:classified 1 strongly-framed 1 security-info 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 request-method GET response-head HTTP/1.1 200 OK
+Server: nginx
+Date: Mon, 29 Apr 2019 14:04:43 GMT
+Content-Type: application/javascript; charset=utf-8
+Content-Length: 19403
+Last-Modified: Thu, 06 Dec 2018 16:30:08 GMT
+ETag: "5c094e90-4bcb"
+Expires: Thu, 02 May 2019 14:04:43 GMT
+Cache-Control: max-age=259200
+X-Content-Type-Options: nosniff
+X-Frame-Options: SAMEORIGIN
+X-UA-Compatible: IE=Edge
+Accept-Ranges: bytes
+ original-response-headers Server: nginx
+Date: Mon, 29 Apr 2019 14:04:43 GMT
+Content-Type: application/javascript; charset=utf-8
+Content-Length: 19403
+Last-Modified: Thu, 06 Dec 2018 16:30:08 GMT
+ETag: "5c094e90-4bcb"
+Expires: Thu, 02 May 2019 14:04:43 GMT
+Cache-Control: max-age=259200
+X-Content-Type-Options: nosniff
+X-Frame-Options: SAMEORIGIN
+X-UA-Compatible: IE=Edge
+Accept-Ranges: bytes
+ uncompressed-len 0 net-response-time-onstart 488 net-response-time-onstop 489   KÀ

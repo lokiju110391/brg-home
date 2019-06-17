@@ -1,0 +1,45 @@
+[Data Source]
+DisplayName=Holidays in Brazil
+Enabled=true
+Parent=d82e6ed64442545cc731a8deeb8c56a339c0b914
+
+[Authentication]
+Host=apidata.googleusercontent.com
+Method=OAuth2
+Port=443
+ProxyUid=system-proxy
+RememberPassword=true
+User=serlokiju@gmail.com
+CredentialName=
+
+[Security]
+Method=tls
+
+[Resource]
+Identity=events::https://apidata.googleusercontent.com/caldav/v2/e1q2sojic5t6ir39c5n26q3fdhkm8obp81jn4rrle0n7cbj3c5m6arj4c5p2sprfdtjmop9ecdnmq%40virtual/events/
+
+[WebDAV Backend]
+AvoidIfmatch=false
+CalendarAutoSchedule=true
+Color=#42d692
+DisplayName=Holidays in Brazil
+EmailAddress=
+ResourcePath=/caldav/v2/e1q2sojic5t6ir39c5n26q3fdhkm8obp81jn4rrle0n7cbj3c5m6arj4c5p2sprfdtjmop9ecdnmq%40virtual/events/
+ResourceQuery=
+SslTrust=
+
+[Calendar]
+BackendName=caldav
+Color=#42d692
+Selected=true
+
+[Alarms]
+IncludeMe=true
+LastNotified=2019-04-29T14:00:03.644376Z
+
+[Offline]
+StaySynchronized=true
+
+[Refresh]
+Enabled=true
+IntervalMinutes=30
