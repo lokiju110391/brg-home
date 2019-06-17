@@ -1,0 +1,306 @@
+
+<?xml version="1.0" encoding="utf-8" ?>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:syn="http://purl.org/rss/1.0/modules/syndication/" xmlns="http://purl.org/rss/1.0/">
+    
+        <channel rdf:about="http://www.tse.jus.br/rss">
+            <title>Tribunal Superior Eleitoral</title>
+            <link>http://www.tse.jus.br</link>
+            <description>O portal do TSE abriga informações sobre eleições, serviços ao eleitor, pesquisa de jurisprudência, publicações e outros assuntos de escopo eleitoral.</description>
+            <image rdf:resource="http://www.tse.jus.br/logo.png"/>
+            <items>
+                <rdf:Seq>
+                    
+                        <rdf:li rdf:resource="http://www.tse.jus.br/imprensa/noticias-tse/2019/Junho/tse-estreia-serie-de-videos-sobre-des-informacao-e-eleicoes-nesta-segunda-feira-17"/>
+                    
+                    
+                        <rdf:li rdf:resource="http://www.tse.jus.br/imprensa/noticias-tse/2019/Junho/presidente-do-tse-convoca-sessao-extraordinaria-para-o-dia-26-de-junho"/>
+                    
+                    
+                        <rdf:li rdf:resource="http://www.tse.jus.br/imprensa/noticias-tse/2019/Junho/conheca-os-conteudos-produzidos-pela-equipe-da-radio-tse"/>
+                    
+                    
+                        <rdf:li rdf:resource="http://www.tse.jus.br/imprensa/noticias-tse/2019/Junho/prazo-para-guarda-de-documentos-contabeis-da-campanha-de-2018-se-encerra-nesta-segunda-17"/>
+                    
+                    
+                        <rdf:li rdf:resource="http://www.tse.jus.br/videos/financiamento-de-campanha-rodrigo-zilio-i-momento-eleitoral-no-69"/>
+                    
+                    
+                        <rdf:li rdf:resource="http://www.tse.jus.br/videos/conexao-eleitoral-presidente-bolsonaro-sanciona-lei-sobre-calunia-eleitoral"/>
+                    
+                    
+                        <rdf:li rdf:resource="http://www.tse.jus.br/videos/decisoes-do-plenario"/>
+                    
+                    
+                        <rdf:li rdf:resource="http://www.tse.jus.br/videos/mesarios-nas-eleicoes-2018-thayanne-fonseca-i-momento-eleitoral-no-68"/>
+                    
+                    
+                        <rdf:li rdf:resource="http://www.tse.jus.br/videos/votos-brancos-e-nulos-renata-dias-i-momento-eleitoral-no-67"/>
+                    
+                </rdf:Seq>
+            </items>
+        </channel>
+        
+            <item rdf:about="http://www.tse.jus.br/imprensa/noticias-tse/2019/Junho/tse-estreia-serie-de-videos-sobre-des-informacao-e-eleicoes-nesta-segunda-feira-17">
+                <title>TSE estreia série de vídeos sobre (Des)Informação e Eleições nesta segunda-feira (17)</title>
+                <link>http://www.tse.jus.br/imprensa/noticias-tse/2019/Junho/tse-estreia-serie-de-videos-sobre-des-informacao-e-eleicoes-nesta-segunda-feira-17</link>
+                <description>
+                    
+                        &lt;img src="http://www.tse.jus.br/imagens/fotos/des-informacao-nas-eleicoes-17-06-2019/@@images/1a9f2fe6-c9b5-49a1-ac4d-ac16633fd770.jpeg"  alt="(Des)Informação nas Eleições " /&gt;
+                    
+                    <![CDATA[
+                        <p>Material reúne depoimentos de especialistas que participaram do Seminário Internacional Fake News e Eleições, realizado em maio deste ano</p>
+                    ]]>
+                    
+                        <![CDATA[
+                            <p>O Tribunal Superior Eleitoral (TSE) veicula a partir desta segunda-feira (17), em seu <a href="https://www.youtube.com/user/justicaeleitoral/featured">canal no YouTube</a>, uma série de vídeos intitulada (Des)Informação e Eleições. O material reúne depoimentos de especialistas que participaram do Seminário Internacional <i>Fake News</i> e Eleições, realizado pela Corte Eleitoral nos dias 16 e 17 de maio deste ano, com o apoio da União Europeia. </p><p>Em sete vídeos de aproximadamente 10 minutos cada, são reunidas as opiniões de especialistas nacionais e internacionais sobre o “fenômeno da desinformação” nas eleições, caracterizado pela disseminação de notícias falsas em processos eleitorais no Brasil e no mundo.</p><p>“É um tema que envolve não só as empresas de redes sociais, mas também a liberdade de imprensa, o financiamento de campanhas e também a autoridade eleitoral”, ressalta o diretor do Departamento de Cooperação e Observação Eleitoral da Organização dos Estados Americanos (OEA), Gerardo de Icaza.</p><p>Na opinião do professor de Marketing Político, Marcelo Vitorino, as opiniões de profissionais multidisciplinares contribuem de forma ímpar na busca de soluções para ajudar a enfrentar o problema. “A discussão acerca do tema é necessária para combater um fenômeno que é global e plural”, complementa o professor de Direito Eleitoral, Diogo Rais.</p>
+                        ]]>
+                    
+                    
+                        <![CDATA[
+                            <p><a href="http://www.tse.jus.br/imprensa/noticias-tse/2019/Junho/tse-estreia-serie-de-videos-sobre-des-informacao-e-eleicoes-nesta-segunda-feira-17">Veja mais</a></p>
+                        ]]>
+                    
+                </description>
+                <dc:publisher>No publisher</dc:publisher>
+                
+                <dc:rights></dc:rights>
+                
+                    <dc:subject>Tribunal Superior Eleitoral</dc:subject>
+                
+                <dc:date>2019-06-17T15:32:13Z</dc:date>
+            </item>
+        
+        
+            <item rdf:about="http://www.tse.jus.br/imprensa/noticias-tse/2019/Junho/presidente-do-tse-convoca-sessao-extraordinaria-para-o-dia-26-de-junho">
+                <title>Presidente do TSE convoca sessão extraordinária para o dia 26 de junho</title>
+                <link>http://www.tse.jus.br/imprensa/noticias-tse/2019/Junho/presidente-do-tse-convoca-sessao-extraordinaria-para-o-dia-26-de-junho</link>
+                <description>
+                    
+                        &lt;img src="http://www.tse.jus.br/imagens/imagens/tse-fachada-materia/@@images/0dd1a1c2-f0be-4926-9409-90b54e46a76e.jpeg"  alt="Matéria" /&gt;
+                    
+                    <![CDATA[
+                        <p>Ministros se reunirão em Plenário, a partir das 19h, para o julgamento de processos administrativos e jurisdicionais</p>
+                    ]]>
+                    
+                        <![CDATA[
+                            <p>A presidente do Tribunal Superior Eleitoral (TSE), ministra Rosa Weber, convocou sessão extraordinária para o próximo dia 26 de junho, quarta-feira. A convocação atende aos requisitos dos artigos 9º, alínea “b”, e 19, <i>caput</i>, do Regimento Interno do Tribunal.</p><p>Os ministros se reunirão a partir das 19h, no Plenário da Corte, para o julgamento de processos administrativos e jurisdicionais.</p><p>O mesmo edital de convocação comunica o cancelamento da sessão desta terça-feira (18).</p><p>CM/LC, DM</p>
+                        ]]>
+                    
+                    
+                        <![CDATA[
+                            <p><a href="http://www.tse.jus.br/imprensa/noticias-tse/2019/Junho/presidente-do-tse-convoca-sessao-extraordinaria-para-o-dia-26-de-junho">Veja mais</a></p>
+                        ]]>
+                    
+                </description>
+                <dc:publisher>No publisher</dc:publisher>
+                
+                <dc:rights></dc:rights>
+                
+                    <dc:subject>Sessão de julgamento</dc:subject>
+                
+                
+                    <dc:subject>Tribunal Superior Eleitoral</dc:subject>
+                
+                
+                    <dc:subject>Justiça Eleitoral</dc:subject>
+                
+                <dc:date>2019-06-17T16:18:52Z</dc:date>
+            </item>
+        
+        
+            <item rdf:about="http://www.tse.jus.br/imprensa/noticias-tse/2019/Junho/conheca-os-conteudos-produzidos-pela-equipe-da-radio-tse">
+                <title>Conheça os conteúdos produzidos pela equipe da Rádio TSE</title>
+                <link>http://www.tse.jus.br/imprensa/noticias-tse/2019/Junho/conheca-os-conteudos-produzidos-pela-equipe-da-radio-tse</link>
+                <description>
+                    
+                        &lt;img src="http://www.tse.jus.br/imagens/fotos/radio-tse-em-06-02-2014-1423255068117/@@images/e011e1bd-ee1f-4a59-b27c-b5fcbd5014a3.jpeg"  alt="Rádio TSE " /&gt;
+                    
+                    <![CDATA[
+                        <p>Material pode ser acessado ou baixado no Portal do Tribunal. Ouvinte pode conferir as principais ações e decisões da Corte Eleitoral e dos TREs</p>
+                    ]]>
+                    
+                        <![CDATA[
+                            <p>Diariamente, a equipe de rádio do Tribunal Superior Eleitoral (TSE) produz diversos conteúdos com informações sobre julgamentos, eventos e reuniões, além de matérias acerca dos serviços ao eleitor. O material pode ser ouvido na Rádio Justiça (104,7 FM) ou no Portal do TSE. Para acessar a página, basta <a href="http://www.tse.jus.br/imprensa/radio">clicar no ícone Rádio TSE</a> e começar a ouvir as informações disponíveis. Também é possível fazer <i>download</i> de tudo que é produzido.</p><p>Na área destinada à rádio, o usuário pode escolher o que quer acessar: Conexão Eleitoral, Por Dentro da Justiça Eleitoral, Notícias e Sessão Plenária. A pesquisa ainda permite filtrar por ano e mês desejados. O programa Diário das Eleições 2018, produzido durante o pleito do ano passado, também aparece entre os destaques do espaço.</p><p><b>Conexão Eleitoral</b></p><p>Editado em formato de revista eletrônica, o programa divulga as principais decisões e ações do TSE e dos Tribunais Regionais Eleitorais (TREs). Também abre espaço para tirar dúvidas do eleitor e mostrar curiosidades da Justiça Eleitoral, com quadros especiais e entrevistas em estúdio. O programa vai ao ar todos os sábados, às 11h10, na Rádio Justiça, sendo reprisado no mesmo horário aos domingos, além de ser distribuído para 1.474 emissoras parceiras e disponibilizado no Portal do TSE.</p>
+                        ]]>
+                    
+                    
+                        <![CDATA[
+                            <p><a href="http://www.tse.jus.br/imprensa/noticias-tse/2019/Junho/conheca-os-conteudos-produzidos-pela-equipe-da-radio-tse">Veja mais</a></p>
+                        ]]>
+                    
+                </description>
+                <dc:publisher>No publisher</dc:publisher>
+                
+                <dc:rights></dc:rights>
+                
+                    <dc:subject>Tribunal Superior Eleitoral</dc:subject>
+                
+                <dc:date>2019-06-14T14:00:50Z</dc:date>
+            </item>
+        
+        
+            <item rdf:about="http://www.tse.jus.br/imprensa/noticias-tse/2019/Junho/prazo-para-guarda-de-documentos-contabeis-da-campanha-de-2018-se-encerra-nesta-segunda-17">
+                <title>Prazo para guarda de documentos contábeis da campanha de 2018 termina nesta segunda (17)</title>
+                <link>http://www.tse.jus.br/imprensa/noticias-tse/2019/Junho/prazo-para-guarda-de-documentos-contabeis-da-campanha-de-2018-se-encerra-nesta-segunda-17</link>
+                <description>
+                    
+                        &lt;img src="http://www.tse.jus.br/imagens/imagens/tremt-prestacao-de-contas/@@images/71e63b1a-7055-4c9f-8fbb-e05b8b59223b.jpeg"  alt="prestação de contas" /&gt;
+                    
+                    <![CDATA[
+                        <p>Regra vale apenas para candidaturas que já tiveram contas julgadas pela Justiça Eleitoral</p>
+                    ]]>
+                    
+                        <![CDATA[
+                            <p>Os partidos políticos e candidatos que concorreram nas Eleições Gerais de 2018 e que já tiveram as suas prestações de contas eleitorais julgadas pela Justiça Eleitoral não serão mais obrigados a manter os documentos da movimentação financeira de suas campanhas a partir desta segunda-feira (17). Nos casos em que o julgamento das prestações de contas ainda não tenha sido concluído, a obrigatoriedade permanece até que haja uma decisão final da Justiça.</p><p>A obrigatoriedade de guardar os documentos das prestações de contas eleitorais por 180 dias, contados a partir da data da diplomação dos eleitos, consta do Calendário Eleitoral de 2018, que compila a regra estabelecida no artigo 32 da Lei 9.504/1997, a chamada Lei das Eleições.</p><p>RG/LC</p>
+                        ]]>
+                    
+                    
+                        <![CDATA[
+                            <p><a href="http://www.tse.jus.br/imprensa/noticias-tse/2019/Junho/prazo-para-guarda-de-documentos-contabeis-da-campanha-de-2018-se-encerra-nesta-segunda-17">Veja mais</a></p>
+                        ]]>
+                    
+                </description>
+                <dc:publisher>No publisher</dc:publisher>
+                
+                <dc:rights></dc:rights>
+                
+                    <dc:subject>Tribunal Superior Eleitoral</dc:subject>
+                
+                <dc:date>2019-06-17T15:36:03Z</dc:date>
+            </item>
+        
+        
+            <item rdf:about="http://www.tse.jus.br/videos/financiamento-de-campanha-rodrigo-zilio-i-momento-eleitoral-no-69">
+                <title>Financiamento de campanha – Rodrigo Zilio I Momento eleitoral nº 69</title>
+                <link>http://www.tse.jus.br/videos/financiamento-de-campanha-rodrigo-zilio-i-momento-eleitoral-no-69</link>
+                <description>
+                    
+                        &lt;img src="https://i.ytimg.com/vi/cEqBQKsdmX0/mqdefault.jpg" /&gt;
+                    
+                    <![CDATA[
+                        <p>No Momento Eleitoral desta semana, Rodrigo Zilio, membro auxiliar da PGE, fala sobre financiamento de campanha eleitoral.</p>
+                    ]]>
+                    
+                    
+                </description>
+                <dc:publisher>No publisher</dc:publisher>
+                
+                <dc:rights></dc:rights>
+                
+                    <dc:subject>EJE Escola Judiciária Eleitoral</dc:subject>
+                
+                <dc:date>2019-06-14T20:51:15Z</dc:date>
+            </item>
+        
+        
+            <item rdf:about="http://www.tse.jus.br/videos/conexao-eleitoral-presidente-bolsonaro-sanciona-lei-sobre-calunia-eleitoral">
+                <title>Conexão Eleitoral - Presidente Bolsonaro sanciona lei sobre calúnia eleitoral</title>
+                <link>http://www.tse.jus.br/videos/conexao-eleitoral-presidente-bolsonaro-sanciona-lei-sobre-calunia-eleitoral</link>
+                <description>
+                    
+                        &lt;img src="https://i.ytimg.com/vi/6JCNN28vbVo/mqdefault.jpg" /&gt;
+                    
+                    <![CDATA[
+                        <p>Conexão Eleitoral - Presidente Bolsonaro sanciona lei sobre calúnia eleitoral</p>
+                    ]]>
+                    
+                    
+                </description>
+                <dc:publisher>No publisher</dc:publisher>
+                
+                <dc:rights></dc:rights>
+                
+                    <dc:subject>Tribunal Superior Eleitoral</dc:subject>
+                
+                
+                    <dc:subject>Youtube</dc:subject>
+                
+                
+                    <dc:subject>Eleições</dc:subject>
+                
+                
+                    <dc:subject>Serviço</dc:subject>
+                
+                
+                    <dc:subject>Eleitor</dc:subject>
+                
+                <dc:date>2019-06-14T18:37:40Z</dc:date>
+            </item>
+        
+        
+            <item rdf:about="http://www.tse.jus.br/videos/decisoes-do-plenario">
+                <title>Decisões do Plenário</title>
+                <link>http://www.tse.jus.br/videos/decisoes-do-plenario</link>
+                <description>
+                    
+                        &lt;img src="https://i.ytimg.com/vi/_XBUbzjfSJw/mqdefault.jpg" /&gt;
+                    
+                    <![CDATA[
+                        <p>O programa Decisões do Plenário desta semana mostra o indeferimento, pelo Plenário do Tribunal Superior Eleitoral (TSE), do registro de candidatura de Ioná Queiroz Nascimento, prefeita de Camamu (BA). </p>
+                    ]]>
+                    
+                    
+                </description>
+                <dc:publisher>No publisher</dc:publisher>
+                
+                <dc:rights></dc:rights>
+                
+                    <dc:subject>Transparência</dc:subject>
+                
+                
+                    <dc:subject>Tribunal Superior Eleitoral</dc:subject>
+                
+                
+                    <dc:subject>Justiça Eleitoral</dc:subject>
+                
+                <dc:date>2019-06-10T14:58:35Z</dc:date>
+            </item>
+        
+        
+            <item rdf:about="http://www.tse.jus.br/videos/mesarios-nas-eleicoes-2018-thayanne-fonseca-i-momento-eleitoral-no-68">
+                <title>Mesários nas Eleições 2018 – Thayanne Fonseca I Momento eleitoral nº 68</title>
+                <link>http://www.tse.jus.br/videos/mesarios-nas-eleicoes-2018-thayanne-fonseca-i-momento-eleitoral-no-68</link>
+                <description>
+                    
+                        &lt;img src="https://i.ytimg.com/vi/H8cMT15MANk/mqdefault.jpg" /&gt;
+                    
+                    <![CDATA[
+                        <p>No Momento Eleitoral desta semana, Henrique Amaral entrevista a Secretária de Gestão de Pessoas do TSE, Thayanne Fonseca sobre o papel dos mesários nas Eleições de 2018.</p>
+                    ]]>
+                    
+                    
+                </description>
+                <dc:publisher>No publisher</dc:publisher>
+                
+                <dc:rights></dc:rights>
+                
+                    <dc:subject>EJE Escola Judiciária Eleitoral</dc:subject>
+                
+                <dc:date>2019-06-07T20:36:43Z</dc:date>
+            </item>
+        
+        
+            <item rdf:about="http://www.tse.jus.br/videos/votos-brancos-e-nulos-renata-dias-i-momento-eleitoral-no-67">
+                <title>Votos brancos e nulos – Renata Dias I Momento eleitoral nº 67</title>
+                <link>http://www.tse.jus.br/videos/votos-brancos-e-nulos-renata-dias-i-momento-eleitoral-no-67</link>
+                <description>
+                    
+                        &lt;img src="https://i.ytimg.com/vi/mOmIgX_VOdM/mqdefault.jpg" /&gt;
+                    
+                    <![CDATA[
+                        <p>Existe alguma utilidade dos votos brancos e nulos no sistema eleitoral brasileiro? Renata Dias, analista judiciária do TSE, responde a essa e outras perguntas no Momento Eleitoral desta semana.</p>
+                    ]]>
+                    
+                    
+                </description>
+                <dc:publisher>No publisher</dc:publisher>
+                
+                <dc:rights></dc:rights>
+                
+                    <dc:subject>EJE Escola Judiciária Eleitoral</dc:subject>
+                
+                <dc:date>2019-06-07T20:35:40Z</dc:date>
+            </item>
+        
+    
+</rdf:RDF>
