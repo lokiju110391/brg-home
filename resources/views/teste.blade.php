@@ -18,9 +18,6 @@ https://www.youtube.com/feeds/videos.xml?channel_id=UCfO_b7sApXI23VnsljvSAJg
 
 <script type="text/javascript">
 	
-
-
-
     var url = 'teste-2';
 
     $( document ).ready(function() {

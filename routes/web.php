@@ -16,7 +16,7 @@ Route::get('/', function () {
 });
 
 Route::get('/land', function () {
-    return view('welcome');
+    return view('index');
 });
 
 Route::get('/teste-1', function () {

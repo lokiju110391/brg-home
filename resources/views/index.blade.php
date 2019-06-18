@@ -738,7 +738,7 @@
                                     <br>
                                     <div class=\"col-md-12 img-news\">
                                         <span class=\"simple-bold\" style=\"color: #212529;\">$title</span> <br><br>
-                                         <img src=\"$image\" width=\"50%\"> <br>
+                                         <img src=\"$image\" width=\"230px\"> <br>
                                     </div>
                                     <br>
                                     <div class=\"col-md-12 text-left text-news\" style=\"color: #212529;\">                                        
