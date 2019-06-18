@@ -111,7 +111,34 @@ a, a:hover, a:active, a:visited, a:focus {
 	background-image: url(../img/topo_bg.png);
 	background-size:     cover;
     background-repeat:   no-repeat;
-    background-position: center center; }
+    background-position: center center; 
+}
+
+.bunner-principal2 {
+	position: relative;
+	top: -16px;
+	background: #4c3629;
+	height: 600px;
+	text-align: center;
+	padding: 30px;
+	background-image: url(../img/Foto_Botânico.jpg);
+	background-size:     cover;
+    background-repeat:   no-repeat;
+    background-position: center center; 
+}
+
+.bunner-principal3 {
+	position: relative;
+	top: -16px;
+	background: #4c3629;
+	height: 600px;
+	text-align: center;
+	padding: 30px;
+	background-image: url(../img/Foto_Palácio_Avenida.jpg);
+	background-size:     cover;
+    background-repeat:   no-repeat;
+    background-position: center center; 
+}
 
 .titulo-branco {
 	padding-top: 10px;
