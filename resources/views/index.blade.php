@@ -557,7 +557,7 @@
             <div class="container">
                 
                 <div class="text-center title-session-brow">                
-                    <h1>NOTICÍAS</h1>
+                    <h1>NOTÍCIAS</h1>
                 </div>
                 
                 <div class="separador-tipo-2"></div>
@@ -626,12 +626,6 @@
                     $title       = $array['item'][0]['title'];
                     $description = $array['item'][0]['description'];
                     $link        = $array['item'][0]['link'];
-
-                    $description_img = str_replace("<img src=\"", "", $description);
-                    $description_img = explode("\"", $description_img);
-                    $description_img = str_replace("\n", "",$description_img);
-                    $description_img = str_replace(" ", "",$description_img);
-                    $description_img = chop($description_img[0]);
 
                     $description_text = str_replace("<img src=\"", "", $description);
                     $description_text = explode("/>", $description_text);
