@@ -76,9 +76,10 @@ a, a:hover, a:active, a:visited, a:focus {
 }
 
 .menu-text-branco {
-	color: #ffffff;
+	color: #ffffff !important;
 	font-weight: 500;
 	font-size: 16px;
+	cursor: pointer;
 }
 
 .menu-text-branco:hover {
@@ -481,8 +482,9 @@ li {
     margin-left: auto;
 }
 
-
-
+.header-font {
+	color: #ffffff;
+}
 
 @media (max-width: 768px) {
 
@@ -493,6 +495,15 @@ li {
 	.bunner-principal {
 		height: 500px !important;
 	}
+
+	.bunner-principal2 {
+		height: 500px !important;
+	}
+
+	.bunner-principal3 {
+		height: 500px !important;
+	}
+
 
 	.avatar-card-name {
 		text-align: center;
