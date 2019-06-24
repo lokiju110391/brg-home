@@ -627,6 +627,7 @@
                     $description = $array['item'][0]['description'];
                     $link        = $array['item'][0]['link'];
 
+                    $description_text = "";
                     if ($description) {
 
                       $description_text = str_replace("<img src=\"", "", $description);
@@ -635,12 +636,14 @@
                       $description_text = strip_tags($description_text);
                       $description_text  = trim($description_text);
                       $description_text = str_replace("\n", "",$description_text);
-                    }
-                   
-                    if (strlen($description_text) > 300) {
-                        $description_text = substr($description_text, 0, 300);
-                        $description_text = $description_text . " ...";
-                    }
+
+                      if (strlen($description_text) > 300) {
+                          $description_text = substr($description_text, 0, 300);
+                          $description_text = $description_text . " ...";
+                      }
+
+
+                    }                  
 
                     $msg = "  
                             <a href=\"$link\" target=\"_black\"> 
