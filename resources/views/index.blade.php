@@ -308,8 +308,8 @@
   <div class="carousel-inner">
     <div class="carousel-item active">
       <div class="bunner-principal">
-                            <div style="margin-top: auto; margin-bottom: auto;">        
-                                <img class="brg-mobile" alt="Logo BRG" src="img/Logo_big.svg" width="600px;" style="padding-top: 40px;">
+                            <div style="margin-top: auto; margin-bottom: auto;">       
+                                <img class="brg-mobile" alt="Logo BRG" src="img/Logo_big.svg" width="500px;" style="padding-top: 150px;">                             
                                 <h2 class="titulo-branco">Soluções jurídicas eficientes.</h2>
                                 <div class="separador-tipo-1"></div>
                                 <div class="brg-mobile" style="width: 600px; margin: auto;">
@@ -324,7 +324,7 @@
     <div class="carousel-item">
       <div class="bunner-principal2">
                             <div style="margin-top: auto; margin-bottom: auto;">        
-                                <img class="brg-mobile" alt="Logo BRG" src="img/Logo_big.svg" width="600px;" style="padding-top: 40px;">
+                                <img class="brg-mobile" alt="Logo BRG" src="img/Logo_big.svg" width="500px;" style="padding-top: 150px;">                             
                                 <h2 class="titulo-branco">Soluções jurídicas eficientes.</h2>
                                 <div class="separador-tipo-1"></div>
                                 <div class="brg-mobile" style="width: 600px; margin: auto;">
@@ -339,7 +339,7 @@
     <div class="carousel-item">
       <div class="bunner-principal3">
                             <div style="margin-top: auto; margin-bottom: auto;">        
-                                <img class="brg-mobile" alt="Logo BRG" src="img/Logo_big.svg" width="600px;" style="padding-top: 40px;">
+                                <img class="brg-mobile" alt="Logo BRG" src="img/Logo_big.svg" width="500px;" style="padding-top: 150px;">                             
                                 <h2 class="titulo-branco">Soluções jurídicas eficientes.</h2>
                                 <div class="separador-tipo-1"></div>
                                 <div class="brg-mobile" style="width: 600px; margin: auto;">

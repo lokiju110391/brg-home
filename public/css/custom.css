@@ -83,7 +83,7 @@ a, a:hover, a:active, a:visited, a:focus {
 }
 
 .menu-text-branco:hover {
-	color: #8e5831;
+	color: #8e5831 !important;
 }
 
 .menu-text-ativo {
