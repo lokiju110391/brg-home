@@ -314,8 +314,8 @@
                                 <div class="separador-tipo-1"></div>
                                 <div class="brg-mobile" style="width: 600px; margin: auto;">
                                     <span class="info-branco">
-                                        O BRG Advogados é um escritório especializado em Cível, Administrativo e Eleitoral, <br>
-                                        que atua de maneira consultiva e contenciosa.
+                                        O BRG Advogados é um escritório especializado em Direito Civil, <br>
+                                        Administrativo e Eleitoral atuando de maneira consultiva e contenciosa.
                                     </span>
                                 </div>
                             </div>
@@ -329,8 +329,8 @@
                                 <div class="separador-tipo-1"></div>
                                 <div class="brg-mobile" style="width: 600px; margin: auto;">
                                     <span class="info-branco">
-                                        O BRG Advogados entende que cada problema demanda uma solução específica. <br> 
-                                        Venha conhecer propostas inovadoras.
+                                        O BRG Advogados entende que cada problema demanda uma solução específica. <br>
+                                        Conheça nossas propostas inovadoras.
                                     </span>
                                 </div>
                             </div>
@@ -344,7 +344,7 @@
                                 <div class="separador-tipo-1"></div>
                                 <div class="brg-mobile" style="width: 600px; margin: auto;">
                                     <span class="info-branco">
-                                        O BRG Advogados busca ir além da resolução de conflitos, <br>
+                                        O BRG Advogados vai além da resolução de conflitos, <br>
                                         nosso propósito é antecipar soluções.
                                     </span>
                                 </div>
@@ -409,8 +409,7 @@
             
             <div class="paragrafo-informative">             
                 <span>
-                    Além dos serviços de assistência jurídica, nossos profissionais têm o objetivo de fornecer aos clientes uma experiência de advocacia 
-                    eficiente e responsável, de forma personalizada, acessível e transparente.          
+                    O BRG Advogados têm como objetivo fornecer aos clientes uma experiência de advocacia singular e acessível, baseada no comprometimento com os interesses de nossos clientes e na tomada de atitudes éticas, íntegras, e transparentes, para conquistar laços de confiança duradoura.          
                 </span>
             </div>
             
