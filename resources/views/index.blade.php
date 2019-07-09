@@ -43,6 +43,8 @@
               $([document.documentElement, document.body]).animate({
                 scrollTop: $("#"+place).offset().top-100
               }, 1000);
+                  $("#menu-mobile").slideUp("fast");
+                $("#icon-menu-mobile").addClass("fa-angle-down").removeClass("fa-angle-up");  
             }
 
 
