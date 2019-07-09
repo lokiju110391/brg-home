@@ -217,7 +217,7 @@
 
         </div>
 
-        <div id="menu-mobile" class="navbar-platta-mobile-menu d-md-none" style="display: none;">
+        <div id="menu-mobile" class="navbar-platta-mobile-menu d-md-none" style="display: none; padding-top: 100px;">
 
             <div class="paginas-mobile" style="padding-top: 10px;">               
 
@@ -259,13 +259,6 @@
 
             </div>
 
-            <div class="login-divider-mobile">
-            </div>
-
-            <div class="login-mobile">
-               <br>
-               <br>
-            </div>
         </div>
 
 
