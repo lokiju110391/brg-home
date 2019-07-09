@@ -217,7 +217,7 @@
 
         </div>
 
-        <div id="menu-mobile" class="navbar-platta-mobile-menu d-md-none" style="display: none; padding-top: 100px;">
+        <div id="menu-mobile" class="navbar-platta-mobile-menu d-md-none" style="display: none; padding-top: 100px; position: fixed; z-index: 9; width: 100%; height: 360px; background: #ffffff;">
 
             <div class="paginas-mobile" style="padding-top: 10px;">               
 
