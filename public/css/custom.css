@@ -177,10 +177,10 @@ a, a:hover, a:active, a:visited, a:focus {
 
 .paragrafo-quote {
 	text-align: justify;
-	font-size: 26px;
+	font-size: 22px;
 	font-weight: 600;
 	color: #aa8367;
-	padding-bottom: 25px;
+	padding-bottom: 40px;
 	margin-left: 30%;
 }
 
@@ -531,7 +531,3 @@ li {
 .title-news {
 	color: #212529 !important;
 }
-
-img-news
-text-news
-autor-news

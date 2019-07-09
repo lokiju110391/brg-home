@@ -199,9 +199,9 @@
         <!-- Topo -->
 
 
-        <div class="menu-topo-brg-mobile d-md-none">
+        <div class="menu-topo-brg-mobile d-md-none" style="position: fixed; z-index: 9999; width: 100%;">
             
-            <div class="row" style="width: 100%;padding-left: 10px; margin-bottom: 10px">                
+            <div class="row" style="width: 100%;padding-left: 10px;">                
                 
                 <div class="navbar-brg-col col-6"> 
                     <a href="/"> 
@@ -292,92 +292,77 @@
             </div>
         </div>
 
-        <!-- Fim Topo -->
+         <!-- Fim Topo -->
+         <br>
+         <br>
+         <div class="d-md-none">
+            <br>
+         </div>
 
-        <!-- Bunner 1 -->
+         <!-- Bunner 1 -->
 
-
-
-
-    <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
-  <ol class="carousel-indicators">
-    <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-    <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-    <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
-  </ol>
-  <div class="carousel-inner">
-    <div class="carousel-item active">
-      <div class="bunner-principal">
-                            <div style="margin-top: auto; margin-bottom: auto;">        
-                                <img class="brg-mobile" alt="Logo BRG" src="img/Logo_big.svg" width="600px;" style="padding-top: 40px;">
-                                <h2 class="titulo-branco">Soluções jurídicas eficientes.</h2>
-                                <div class="separador-tipo-1"></div>
-                                <div class="brg-mobile" style="width: 600px; margin: auto;">
-                                    <span class="info-branco">
-                                        O BRG Advogados é um escritório especializado em Cível, Administrativo e Eleitoral, <br>
-                                        que atua de maneira consultiva e contenciosa.
-                                    </span>
-                                </div>
-                            </div>
+         <div id="carouselExampleIndicators" class="carousel slide fix-mobile" data-ride="carousel">
+            <ol class="carousel-indicators">
+               <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+               <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+               <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+            </ol>
+            <div class="carousel-inner">
+               <div class="carousel-item active">
+                  <div class="bunner-principal">
+                     <div style="margin-top: auto; margin-bottom: auto;">        
+                        <img class="brg-mobile" alt="Logo BRG" src="img/Logo_big.svg" width="600px;" style="padding-top: 40px;">
+                        <h2 class="titulo-branco">Soluções jurídicas eficientes.</h2>
+                        <div class="separador-tipo-1"></div>
+                        <div class="brg-mobile" style="width: 600px; margin: auto;">
+                           <span class="info-branco">
+                              O BRG Advogados é um escritório especializado em Cível, Administrativo e Eleitoral, <br>
+                              que atua de maneira consultiva e contenciosa.
+                           </span>
                         </div>
-    </div>
-    <div class="carousel-item">
-      <div class="bunner-principal2">
-                            <div style="margin-top: auto; margin-bottom: auto;">        
-                                <img class="brg-mobile" alt="Logo BRG" src="img/Logo_big.svg" width="600px;" style="padding-top: 40px;">
-                                <h2 class="titulo-branco">Soluções jurídicas eficientes.</h2>
-                                <div class="separador-tipo-1"></div>
-                                <div class="brg-mobile" style="width: 600px; margin: auto;">
-                                    <span class="info-branco">
-                                        O BRG Advogados entende que cada problema demanda uma solução específica. <br> 
-                                        Venha conhecer propostas inovadoras.
-                                    </span>
-                                </div>
-                            </div>
+                     </div>
+                  </div>
+               </div>
+               <div class="carousel-item">
+                  <div class="bunner-principal2">
+                     <div style="margin-top: auto; margin-bottom: auto;">        
+                        <img class="brg-mobile" alt="Logo BRG" src="img/Logo_big.svg" width="600px;" style="padding-top: 40px;">
+                        <h2 class="titulo-branco">Soluções jurídicas eficientes.</h2>
+                        <div class="separador-tipo-1"></div>
+                        <div class="brg-mobile" style="width: 600px; margin: auto;">
+                           <span class="info-branco">
+                              O BRG Advogados entende que cada problema demanda uma solução específica. <br> 
+                              Venha conhecer propostas inovadoras.
+                           </span>
                         </div>
-    </div>
-    <div class="carousel-item">
-      <div class="bunner-principal3">
-                            <div style="margin-top: auto; margin-bottom: auto;">        
-                                <img class="brg-mobile" alt="Logo BRG" src="img/Logo_big.svg" width="600px;" style="padding-top: 40px;">
-                                <h2 class="titulo-branco">Soluções jurídicas eficientes.</h2>
-                                <div class="separador-tipo-1"></div>
-                                <div class="brg-mobile" style="width: 600px; margin: auto;">
-                                    <span class="info-branco">
-                                        O BRG Advogados busca ir além da resolução de conflitos, <br>
-                                        nosso propósito é antecipar soluções.
-                                    </span>
-                                </div>
-                            </div>
+                     </div>
+                  </div>
+               </div>
+               <div class="carousel-item">
+                  <div class="bunner-principal3">
+                     <div style="margin-top: auto; margin-bottom: auto;">        
+                        <img class="brg-mobile" alt="Logo BRG" src="img/Logo_big.svg" width="600px;" style="padding-top: 40px;">
+                        <h2 class="titulo-branco">Soluções jurídicas eficientes.</h2>
+                        <div class="separador-tipo-1"></div>
+                        <div class="brg-mobile" style="width: 600px; margin: auto;">
+                           <span class="info-branco">
+                              O BRG Advogados busca ir além da resolução de conflitos, <br>
+                              nosso propósito é antecipar soluções.
+                           </span>
                         </div>
-    </div>
-  </div>
-  <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
-    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-    <span class="sr-only">Previous</span>
-  </a>
-  <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
-    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-    <span class="sr-only">Next</span>
-  </a>
-</div>
-
-
-
-
-
-
-
-
-                        
-
-
-
-
-
-
-
-
+                     </div>
+                  </div>
+               </div>
+            </div>
+            <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+               <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+               <span class="sr-only">Previous</span>
+            </a>
+            <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+               <span class="carousel-control-next-icon" aria-hidden="true"></span>
+               <span class="sr-only">Next</span>
+            </a>
+         </div>
 
         <!-- Fim Bunner 1 -->
         
@@ -409,8 +394,7 @@
             
             <div class="paragrafo-informative">             
                 <span>
-                    Além dos serviços de assistência jurídica, nossos profissionais têm o objetivo de fornecer aos clientes uma experiência de advocacia 
-                    eficiente e responsável, de forma personalizada, acessível e transparente.          
+                    O BRG Advogados busca entregar aos seus clientes uma experiência de advocacia singular e acessível, baseada no comprometimento com os interesses representados e na tomada de atitudes éticas, íntegras e transparentes, com o objetivo de conquistar uma relação de confiança duradoura.         
                 </span>
             </div>
             
@@ -818,7 +802,8 @@
                     <div class="col-md-6">
                         <span class="conteudo-white" id="contact" name="contact"> CONTATO </span> <br> <br>
                         <span class="endereco-white"> <i class="fas fa-map-marker-alt icon-brg"></i> R. Mal. Deodoro, 450 - Sala 1105, Centro <br> Curitiba - PR | CEP: 800.10-010 </span> <br> <br>
-                        <span class="endereco-white"> <i class="fas fa-phone icon-brg"></i> Tel. 41 3322.2500 | 41 985.352.500 </span> <br>
+                        <span class="endereco-white"> <i class="fas fa-phone icon-brg"></i> Tel. 41 3322.2500 | 41 985.352.500 </span> <br> <br>
+                        <span class="endereco-white" style="cursor: pointer" onclick="abrir_social('https://www.linkedin.com/company/brgadv/?viewAsMember=true')"> <i class="fab fa-linkedin link-social" style="padding: 0px;"></i> </span><br>
                         <br>
                         <form>
                             
