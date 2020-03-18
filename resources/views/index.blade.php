@@ -75,11 +75,6 @@
               $("#drop-down-produto").slideUp("fast");
             }
 
-
-
-        </script>
-
-        <script>
             // Initialize and add the map
             function initMap() {
                 // The location of Uluru
@@ -184,6 +179,9 @@
 
                 $( "#t1-a" ).height(valor);
                 $( "#t3-a" ).height(valor);
+
+                $(".aviso_modal").modal();
+
 
             });
             
@@ -751,39 +749,42 @@
                     $xml = simplexml_load_string($header);
                     $json = json_encode($xml);
                     $array = json_decode($json,TRUE);
+                    
+                    if (array_key_exists("channel", $array)) {
 
-                    $image       = $array['channel']['image']['url'];
-                    $title       = $array['channel']['item'][0]['title'];
-                    $description = $array['channel']['item'][0]['description'];
-                    $pubDate     = $array['channel']['item'][0]['pubDate'];
-                    $link        = $array['channel']['item'][0]['link'];
+                        $title       = $array['channel']['item'][0]['title'];
+                        $description = $array['channel']['item'][0]['description'];
+                        $pubDate     = $array['channel']['item'][0]['pubDate'];
+                        $link        = $array['channel']['item'][0]['link'];
 
-                    $pubDate = strftime("%d/%m/%Y", strtotime($pubDate));
+                        $pubDate = strftime("%d/%m/%Y", strtotime($pubDate));
 
-                    $msg = "  
-                            <a href=\"$link\" target=\"_black\"> 
-                                <div class=\"card-noticia-1 text-center\" style=\"cursor: pointer\"> 
-                                                                            
-                                    <br>
-                                    <div class=\"row vcenter\">
-                                        <div class=\"col-md-4 img-news\">
-                                             <img src=\"$image\" width=\"50%\">
+                        $msg = "  
+                                <a href=\"$link\" target=\"_black\"> 
+                                    <div class=\"card-noticia-1 text-center\" style=\"cursor: pointer\"> 
+                                                                                
+                                        <br>
+                                        <div class=\"row vcenter\">
+                                            <div class=\"col-md-4 img-news\">
+                                                 <img src=\"img/migalhas.svg\" width=\"50%\">
+                                            </div>
+                                            <div class=\"col-md-8 text-left text-news\" style=\"color: #212529;\">
+                                                <span class=\"simple-bold\" style=\"color: #212529;\">$title</span> <br>
+                                                $description
+                                            </div>
                                         </div>
-                                        <div class=\"col-md-8 text-left text-news\" style=\"color: #212529;\">
-                                            <span class=\"simple-bold\" style=\"color: #212529;\">$title</span> <br>
-                                            $description
+
+                                        <div class=\"text-right autor-news\" style=\"color: #212529;\">
+                                            Migalhas - $pubDate
                                         </div>
+
                                     </div>
+                                </a>
+                                    ";
 
-                                    <div class=\"text-right autor-news\" style=\"color: #212529;\">
-                                        Migalhas - $pubDate
-                                    </div>
+                        echo $msg;
 
-                                </div>
-                            </a>
-                                ";
-
-                    echo $msg;
+                    }                   
 
                 ?>
 
@@ -842,4 +843,38 @@
     
 </html>
 
+<!-- Modal -->
+<div class="modal fade aviso_modal" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalCenterTitle">COMUNICADO COVID-19</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
 
+                <br>
+                <div class="text-center">
+                    <img src="img/Logo.svg" height="110px">
+                </div>
+                <br>
+
+                <div class="text-center" style="text-align: justify !important;margin: 25px;">
+                    Em razão das recomendações da <strong>OMS</strong> e do Ministério da Saúde em relação ao <strong>COVID-19</strong> e a 
+                    necessidade de limitar a circulação de pessoas, nossa equipe adotou o sistema de atendimento remoto,
+                    razão pela qual a partir de <strong>18/03/2020</strong> estaremos disponíveis pelo nosso telefone móvel: <strong>(41) 98535-2500 </strong>
+                    ou através do email: 
+                    <a href="mailto:contato@brgadvogados.com title&body=Contato BRG" style="color: #0056b3; font-weight: bold;">
+                        contato@brgadvogados.com
+                    </a>
+                </div>
+
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
+            </div>
+        </div>
+    </div>
+</div>

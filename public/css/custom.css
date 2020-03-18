@@ -71,7 +71,7 @@ a, a:hover, a:active, a:visited, a:focus {
 	background-color: #1f140e;
 	position: fixed;
     width: 100%;
-    z-index: 900000;
+    z-index: 1000;
     height: 65px;  	
 }
 
